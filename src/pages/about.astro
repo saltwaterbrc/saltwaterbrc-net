@@ -1,0 +1,35 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+<BaseLayout title="About">
+  <section class="hero" style="padding: 48px 24px;">
+    <div class="hero-content">
+      <h1>About <span class="accent">This Project</span></h1>
+    </div>
+  </section>
+
+  <main class="main-content" style="max-width: 720px;">
+    <p style="color: var(--text-secondary); font-size: 1.1rem; margin-bottom: 24px;">SaltWaterBRC is a personal blog documenting my journey learning to trade options from absolute zero.</p>
+
+    <h2 style="font-size: 1.4rem; margin-bottom: 16px; margin-top: 40px;">The Setup</h2>
+    <p style="color: var(--text-secondary); margin-bottom: 16px;">I'm Brandon. I have a background in tech, not trading. I helped my friend Ed build <a href="https://go-maz.com">go-maz.com</a> — an options trading screener and analysis platform — using Claude AI and Cloudflare. Somewhere along the way, Ed started teaching me what all the data on the site actually means.</p>
+    <p style="color: var(--text-secondary); margin-bottom: 16px;">This blog is the result: a real-time journal of learning options trading, starting with $1,000 on Tastytrade, guided by Ed's rule-based framework on Go Maz.</p>
+
+    <h2 style="font-size: 1.4rem; margin-bottom: 16px; margin-top: 40px;">The Stack</h2>
+    <table class="data-table">
+      <tbody>
+        <tr><td class="ticker">Blog</td><td>Astro + Cloudflare Pages</td></tr>
+        <tr><td class="ticker">Screener</td><td>Go Maz (go-maz.com)</td></tr>
+        <tr><td class="ticker">Broker</td><td>Tastytrade</td></tr>
+        <tr><td class="ticker">AI Assistant</td><td>Claude (Anthropic)</td></tr>
+        <tr><td class="ticker">Infrastructure</td><td>Cloudflare (DNS, Pages, Workers, Security)</td></tr>
+      </tbody>
+    </table>
+
+    <h2 style="font-size: 1.4rem; margin-bottom: 16px; margin-top: 40px;">Disclaimer</h2>
+    <div class="callout warning">
+      <div class="callout-title">Not Financial Advice</div>
+      <p>I am not a financial advisor. Nothing on this site constitutes financial advice. This is a personal educational journal. I'm a beginner — don't follow my trades. Always do your own research and consult a qualified professional before making investment decisions.</p>
+    </div>
+  </main>
+</BaseLayout>

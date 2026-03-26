@@ -1,0 +1,108 @@
+---
+import BlogPost from '../../layouts/BlogPost.astro';
+---
+<BlogPost title="Day 1 — The Setup" date="March 26, 2026" tag="journal" description="Account funded, screener running, first analysis complete. Here's everything I learned on day one.">
+
+<p>Today I officially started my options trading journey. Not with a trade — but with the infrastructure. The platform. The homework. The plan.</p>
+
+<p>I've been working with <strong>Ed from Go Maz</strong> to learn options from the ground up. Ed built <a href="https://go-maz.com">go-maz.com</a> — a trading system that screens stocks, checks them against a rule-based framework, and suggests setups. I actually helped him build the site using <strong>Claude and Cloudflare</strong>, so I know the tech. Now I need to learn what the data actually means.</p>
+
+<p>This blog is the documentation of that process. Every lesson, every mistake, every trade — logged here in public.</p>
+
+<h2>The Starting Point</h2>
+
+<div class="stats-row">
+  <div class="stat-card">
+    <div class="stat-value">$1,000</div>
+    <div class="stat-label">Starting Capital</div>
+  </div>
+  <div class="stat-card">
+    <div class="stat-value">Tastytrade</div>
+    <div class="stat-label">Brokerage</div>
+  </div>
+  <div class="stat-card">
+    <div class="stat-value">Go Maz</div>
+    <div class="stat-label">Screener / Analysis</div>
+  </div>
+  <div class="stat-card">
+    <div class="stat-value">Zero</div>
+    <div class="stat-label">Prior Experience</div>
+  </div>
+</div>
+
+<p>I funded a Tastytrade account with $1,000. That's it. That's the bankroll. Ed made it very clear — <strong>do not worry about paper trading</strong>. Real money, real stakes, but with strict risk management. The goal is to learn by doing with small, controlled positions.</p>
+
+<h2>Ed's Framework</h2>
+
+<p>Ed laid out a simple, repeatable system for a beginner with a small account:</p>
+
+<div class="callout info">
+  <div class="callout-title">Ed's Rules</div>
+  <p><strong>Buy 20-delta options</strong> costing around $200 per contract. Set a <strong>50% stop loss</strong> immediately — meaning your max loss on any single trade is $100. Look for <strong>30-60 day expirations</strong> to give the trade time to work. Use the Go Maz screener to find setups that pass the rule framework.</p>
+</div>
+
+<p>He explained that options pricing is based on the <strong>Black-Scholes model</strong> and that options serve three purposes: hedging, income, and speculation. For now, I'm in learning-and-small-speculation mode.</p>
+
+<p>Ed also walked me through a quick example: a <strong>56-delta AAPL June 18 call</strong> was priced around $1,800 — way out of my range. But a <strong>20-delta option</strong> on the same stock? Around $350. And with a 50% stop loss, the max damage is $175. That's the sweet spot for a $1K account.</p>
+
+<h2>The Homework</h2>
+
+<p>Ed assigned some prep work before our next session:</p>
+
+<ul>
+  <li>Watch <strong>Dr. Jim's intro videos</strong> on calls, puts, and the Greeks</li>
+  <li>Study the <strong>VIX</strong> — what it is, how volatility impacts option pricing</li>
+  <li>Learn to read an options chain on Tastytrade</li>
+  <li>Explore the Go Maz dashboard: screener, stock checker, money flow</li>
+  <li>Understand the concept of <strong>delta</strong> — specifically why 20-delta is the target</li>
+</ul>
+
+<h2>Key Terms I Need to Learn</h2>
+
+<table class="data-table">
+  <thead>
+    <tr>
+      <th>Term</th>
+      <th>What It Means (So Far)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td class="ticker">Delta</td>
+      <td>How much an option's price moves per $1 move in the stock. 20-delta = roughly 20% chance of being in-the-money at expiration.</td>
+    </tr>
+    <tr>
+      <td class="ticker">Theta</td>
+      <td>Time decay — how much value the option loses each day. Works against buyers.</td>
+    </tr>
+    <tr>
+      <td class="ticker">IV Rank</td>
+      <td>Where current implied volatility sits relative to the past year. Low IV = cheaper options = better for buying.</td>
+    </tr>
+    <tr>
+      <td class="ticker">Strike Price</td>
+      <td>The price you're betting the stock will reach.</td>
+    </tr>
+    <tr>
+      <td class="ticker">Premium</td>
+      <td>What you pay for the option contract. This is your max risk when buying.</td>
+    </tr>
+    <tr>
+      <td class="ticker">Stop Loss</td>
+      <td>An automatic sell order that limits your loss. Ed says 50% — if I buy at $200, I sell at $100.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2>What's Next</h2>
+
+<p>Tomorrow I'll dig into the Go Maz screener results from today's scan (full analysis in the <a href="/blog/go-maz-first-scan">next post</a>). The screener found 8 tickers with strong setups — AMD, NVDA, AMZN, TSLA, MSFT, BA, DIS, and RIVN. I need to cross-reference those against Ed's 20-delta / $200 budget framework and figure out which ones actually fit a $1K account.</p>
+
+<p>Ed is also rolling out a <strong>$5/month program</strong> on Go Maz starting tomorrow. That's going to be my main learning tool alongside Tastytrade's education platform.</p>
+
+<div class="callout warning">
+  <div class="callout-title">Disclaimer</div>
+  <p>I am not a financial advisor. I'm literally a beginner. Nothing on this blog is financial advice. This is just my personal journal of learning to trade options. Don't follow my trades — I barely know what I'm doing yet.</p>
+</div>
+
+</BlogPost>

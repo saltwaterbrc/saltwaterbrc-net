@@ -1,0 +1,44 @@
+---
+interface Props {
+  title: string;
+  description?: string;
+}
+
+const { title, description = "Learning options trading from zero — one trade at a time." } = Astro.props;
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content={description} />
+  <title>{title} | SaltWaterBRC</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav-container">
+      <a href="/" class="site-logo">SaltWaterBRC <span>/ options</span></a>
+      <ul class="nav-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/blog">Blog</a></li>
+        <li><a href="/about">About</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <slot />
+
+  <footer class="site-footer">
+    <p>&copy; {new Date().getFullYear()} SaltWaterBRC. Built with Astro + Cloudflare + Claude.</p>
+    <p style="margin-top: 8px;">Not financial advice. Learning in public.</p>
+  </footer>
+</body>
+</html>
+
+<style is:global>
+  @import '../styles/global.css';
+</style>

@@ -1,0 +1,220 @@
+---
+import BlogPost from '../../layouts/BlogPost.astro';
+---
+<BlogPost title="Go Maz First Scan — What the Screener Found" date="March 26, 2026" tag="analysis" description="Running the Go Maz screener for the first time. AMD, NVDA, BA, and RIVN all lit up.">
+
+<p>This morning I ran the <strong>Go Maz Full Scan</strong> for the first time. The screener analyzes stocks across 7 rules — options volume, IV rank, support/resistance levels, chart patterns, volume confirmation, moving average alignment, and unusual activity. Each stock gets a score and a suggested trade.</p>
+
+<p>Here's everything that came back, plus my notes on which ones actually fit Ed's framework for a $1K account.</p>
+
+<h2>Full Scan Results — March 26, 2026</h2>
+
+<table class="data-table">
+  <thead>
+    <tr>
+      <th>Score</th>
+      <th>Ticker</th>
+      <th>Action</th>
+      <th>Price</th>
+      <th>Pattern</th>
+      <th>IV Rank</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><span class="score high">88%</span></td>
+      <td class="ticker">AMD</td>
+      <td class="calls">CALLS</td>
+      <td>$220.27</td>
+      <td>Breakout Gap</td>
+      <td>65</td>
+    </tr>
+    <tr>
+      <td><span class="score high">84%</span></td>
+      <td class="ticker">AMZN</td>
+      <td class="calls">CALLS</td>
+      <td>$211.71</td>
+      <td>Bull Flag</td>
+      <td>48</td>
+    </tr>
+    <tr>
+      <td><span class="score high">82%</span></td>
+      <td class="ticker">NVDA</td>
+      <td class="calls">CALLS</td>
+      <td>$178.68</td>
+      <td>Ascending Triangle</td>
+      <td>58</td>
+    </tr>
+    <tr>
+      <td><span class="score med">79%</span></td>
+      <td class="ticker">TSLA</td>
+      <td class="calls">CALLS</td>
+      <td>$385.95</td>
+      <td>Double Bottom</td>
+      <td>72</td>
+    </tr>
+    <tr>
+      <td><span class="score med">76%</span></td>
+      <td class="ticker">MSFT</td>
+      <td class="puts">PUTS</td>
+      <td>$371.04</td>
+      <td>Bearish Flag</td>
+      <td>35</td>
+    </tr>
+    <tr>
+      <td><span class="score med">74%</span></td>
+      <td class="ticker">BA</td>
+      <td class="calls">CALLS</td>
+      <td>$199.61</td>
+      <td>Inv Head &amp; Shoulders</td>
+      <td>68</td>
+    </tr>
+    <tr>
+      <td><span class="score med">72%</span></td>
+      <td class="ticker">DIS</td>
+      <td class="puts">PUTS</td>
+      <td>$95.95</td>
+      <td>Descending Triangle</td>
+      <td>45</td>
+    </tr>
+    <tr>
+      <td><span class="score med">69%</span></td>
+      <td class="ticker">RIVN</td>
+      <td class="puts">PUTS</td>
+      <td>$15.62</td>
+      <td>Breakdown</td>
+      <td>85</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2>Deep Dives — Stock Checker (Ed's Rules)</h2>
+
+<p>I used Go Maz's Stock Checker tool to run the top picks through Ed's full rule framework. This gives a more detailed breakdown than the screener — including liquidity data, IV analysis, and a suggested trade with specific strikes.</p>
+
+<h3>AMD — 85% | Strong Setup | Calls</h3>
+
+<div class="stats-row">
+  <div class="stat-card">
+    <div class="stat-value">85%</div>
+    <div class="stat-label">Score</div>
+  </div>
+  <div class="stat-card">
+    <div class="stat-value">45</div>
+    <div class="stat-label">IV Rank</div>
+  </div>
+  <div class="stat-card">
+    <div class="stat-value">$0.02</div>
+    <div class="stat-label">Bid/Ask Spread</div>
+  </div>
+  <div class="stat-card">
+    <div class="stat-value">18M</div>
+    <div class="stat-label">Avg Daily Volume</div>
+  </div>
+</div>
+
+<p>AMD passed <strong>6 out of 7 rules</strong> (only missed Unusual Activity). Strong breakout gap with +7.26% move, breaking key resistance. Semiconductor sector showing relative outperformance. Liquidity is excellent — tight spreads, massive volume.</p>
+
+<p><strong>Go Maz Suggested:</strong> 225C April 16, target $235, stop $210</p>
+<p><strong>Ed's Framework Adaptation:</strong> Look at May expiry, $240-250 strike range for 20-delta. Expected cost ~$150-250.</p>
+
+<h3>NVDA — 85% | Strong Setup | Calls</h3>
+
+<div class="stats-row">
+  <div class="stat-card">
+    <div class="stat-value">85%</div>
+    <div class="stat-label">Score</div>
+  </div>
+  <div class="stat-card">
+    <div class="stat-value" style="color: #3fb950;">28</div>
+    <div class="stat-label">IV Rank (Low!)</div>
+  </div>
+  <div class="stat-card">
+    <div class="stat-value">$0.02</div>
+    <div class="stat-label">Bid/Ask Spread</div>
+  </div>
+  <div class="stat-card">
+    <div class="stat-value">45M</div>
+    <div class="stat-label">Avg Daily Volume</div>
+  </div>
+</div>
+
+<p>NVDA also passed 6/7 rules. Bull flag pattern continuation, breaking $175.20 resistance. The big story here is the <strong>IV Rank of only 28</strong> — that means implied volatility is low relative to the past year, which means <strong>options are cheap</strong>. This is exactly what Ed talks about — low IV is the ideal time to buy options.</p>
+
+<p><strong>Go Maz Suggested:</strong> 180 Call April 18, target $185-188, stop $174</p>
+<p><strong>Ed's Framework Adaptation:</strong> May expiry, $195-200 strike for 20-delta. <strong>Best value play on the board</strong> due to low IV.</p>
+
+<h3>BA (Boeing) — 78% | Strong Setup | Calls</h3>
+
+<div class="stats-row">
+  <div class="stat-card">
+    <div class="stat-value">78%</div>
+    <div class="stat-label">Score</div>
+  </div>
+  <div class="stat-card">
+    <div class="stat-value">35</div>
+    <div class="stat-label">IV Rank</div>
+  </div>
+  <div class="stat-card">
+    <div class="stat-value">$0.03</div>
+    <div class="stat-label">Bid/Ask Spread</div>
+  </div>
+  <div class="stat-card">
+    <div class="stat-value">8.5M</div>
+    <div class="stat-label">Avg Daily Volume</div>
+  </div>
+</div>
+
+<p>BA breaking $199 resistance with bullish MA alignment across 20/50/200 day averages. Bull flag pattern completing. Defense sector catalysts in play. IV Rank at 35 is favorable for buying calls.</p>
+
+<p><strong>Go Maz Suggested:</strong> $200-202 Call April 18, target $210-215, stop $195</p>
+<p><strong>Ed's Framework Adaptation:</strong> May expiry, $215-220 strike for 20-delta.</p>
+
+<h3>RIVN (Rivian) — 78% | Strong Setup | Puts</h3>
+
+<div class="stats-row">
+  <div class="stat-card">
+    <div class="stat-value">78%</div>
+    <div class="stat-label">Score</div>
+  </div>
+  <div class="stat-card">
+    <div class="stat-value" style="color: #3fb950;">28</div>
+    <div class="stat-label">IV Rank (Low)</div>
+  </div>
+  <div class="stat-card">
+    <div class="stat-value">$0.08</div>
+    <div class="stat-label">Bid/Ask Spread</div>
+  </div>
+  <div class="stat-card">
+    <div class="stat-value">180K</div>
+    <div class="stat-label">Avg Daily Volume</div>
+  </div>
+</div>
+
+<p>RIVN is the bearish play on the board. EV sector weakness, breaking key support at $15.80, price below all major moving averages. The interesting thing here is the <strong>price — at $15.62, options are dirt cheap</strong>. A May put could cost $50-100 per contract. That's perfect for a $1K account practicing small positions.</p>
+
+<p><strong>Go Maz Suggested:</strong> $15 PUT April 18, target $14.25, stop $16.20</p>
+<p><strong>Ed's Framework Adaptation:</strong> May expiry, $14-15 puts. Budget-friendly directional play.</p>
+
+<h2>My Watchlist (Filtered for $1K Account)</h2>
+
+<div class="callout success">
+  <div class="callout-title">Priority Research List</div>
+  <p><strong>1. NVDA May Calls</strong> — Best value (lowest IV), strongest liquidity<br>
+  <strong>2. AMD May Calls</strong> — Highest screener score, breakout momentum<br>
+  <strong>3. RIVN May Puts</strong> — Cheapest play, fits small account perfectly<br>
+  <strong>4. BA May Calls</strong> — Clean setup, defense catalysts</p>
+</div>
+
+<h2>What I Still Need to Figure Out</h2>
+
+<p>The screener gave me the <em>what</em>. Ed's rules gave me the <em>how</em>. But I still need to figure out the execution on Tastytrade — specifically finding the right strike where delta is around 0.20 and the premium fits the ~$200 budget. That's the next step.</p>
+
+<p>I also need to understand <strong>why</strong> some of these rules matter more than others. The "Rule Dots" system on Go Maz (green = pass, red = fail) gives a quick visual, but I want to understand the weight each rule carries. That's a question for Ed next session.</p>
+
+<div class="callout warning">
+  <div class="callout-title">Disclaimer</div>
+  <p>This is not financial advice. I'm a complete beginner documenting my learning process. These are screener results and analysis for educational purposes only. Do your own research.</p>
+</div>
+
+</BlogPost>

@@ -1,0 +1,35 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+<BaseLayout title="Blog">
+  <section class="hero" style="padding: 48px 24px;">
+    <div class="hero-content">
+      <h1>The <span class="accent">Trading Journal</span></h1>
+      <p>Every lesson, analysis, and trade — documented from day one.</p>
+    </div>
+  </section>
+
+  <main class="main-content">
+    <div class="posts-grid">
+      <a href="/blog/day-1-the-setup" class="post-card" style="text-decoration: none; color: inherit;">
+        <span class="tag">Journal</span>
+        <h3>Day 1 — The Setup</h3>
+        <p>Account funded, screener running, first analysis complete. Here's everything I learned on day one.</p>
+        <div class="post-meta">
+          <span>March 26, 2026</span>
+          <span>8 min read</span>
+        </div>
+      </a>
+
+      <a href="/blog/go-maz-first-scan" class="post-card" style="text-decoration: none; color: inherit;">
+        <span class="tag analysis">Analysis</span>
+        <h3>Go Maz First Scan — What the Screener Found</h3>
+        <p>Running the Go Maz screener for the first time. Full breakdown with Ed's rules applied.</p>
+        <div class="post-meta">
+          <span>March 26, 2026</span>
+          <span>6 min read</span>
+        </div>
+      </a>
+    </div>
+  </main>
+</BaseLayout>

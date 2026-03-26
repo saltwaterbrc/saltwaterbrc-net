@@ -1,0 +1,41 @@
+---
+interface Props {
+  title: string;
+  date: string;
+  description?: string;
+  tag?: string;
+}
+
+import BaseLayout from './BaseLayout.astro';
+
+const { title, date, description, tag = "journal" } = Astro.props;
+---
+<BaseLayout title={title} description={description}>
+  <article>
+    <div class="post-header">
+      <span class={`tag ${tag}`}>{tag}</span>
+      <h1>{title}</h1>
+      <p class="post-date">{date}</p>
+    </div>
+    <div class="post-body">
+      <slot />
+    </div>
+  </article>
+</BaseLayout>
+
+<style>
+  .post-header .tag {
+    display: inline-block;
+    padding: 3px 10px;
+    border-radius: 6px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 16px;
+  }
+  .tag.journal { background: rgba(63, 185, 80, 0.12); color: #3fb950; }
+  .tag.analysis { background: rgba(88, 166, 255, 0.12); color: #58a6ff; }
+  .tag.education { background: rgba(188, 140, 255, 0.12); color: #bc8cff; }
+  .tag.trade { background: rgba(210, 153, 34, 0.12); color: #d29922; }
+</style>

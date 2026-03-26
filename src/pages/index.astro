@@ -1,0 +1,67 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+<BaseLayout title="Home">
+  <section class="hero">
+    <div class="hero-content">
+      <span class="hero-tag">Learning in Public</span>
+      <h1>From Zero to <span class="accent">Options Trader</span></h1>
+      <p>Following the journey of learning options trading from scratch — powered by Go Maz, Tastytrade, and a whole lot of homework. Every trade, every lesson, documented.</p>
+    </div>
+  </section>
+
+  <main class="main-content">
+    <div class="stats-row">
+      <div class="stat-card">
+        <div class="stat-value">$1K</div>
+        <div class="stat-label">Starting Capital</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-value">Day 1</div>
+        <div class="stat-label">Journey Started</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-value">20Δ</div>
+        <div class="stat-label">Target Delta</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-value">$100</div>
+        <div class="stat-label">Max Loss Per Trade</div>
+      </div>
+    </div>
+
+    <h2 style="margin-top: 48px; font-size: 1.5rem; font-weight: 700;">Latest Posts</h2>
+
+    <div class="posts-grid">
+      <a href="/blog/day-1-the-setup" class="post-card" style="text-decoration: none; color: inherit;">
+        <span class="tag">Journal</span>
+        <h3>Day 1 — The Setup</h3>
+        <p>Account funded, screener running, first analysis complete. Here's everything I learned on day one of my options trading journey with Go Maz.</p>
+        <div class="post-meta">
+          <span>March 26, 2026</span>
+          <span>8 min read</span>
+        </div>
+      </a>
+
+      <a href="/blog/go-maz-first-scan" class="post-card" style="text-decoration: none; color: inherit;">
+        <span class="tag analysis">Analysis</span>
+        <h3>Go Maz First Scan — What the Screener Found</h3>
+        <p>Running the Go Maz screener for the first time. AMD, NVDA, BA, and RIVN all lit up. Here's the full breakdown with Ed's rules applied.</p>
+        <div class="post-meta">
+          <span>March 26, 2026</span>
+          <span>6 min read</span>
+        </div>
+      </a>
+
+      <a href="#" class="post-card" style="text-decoration: none; color: inherit; opacity: 0.5;">
+        <span class="tag education">Education</span>
+        <h3>What Is a 20 Delta Option?</h3>
+        <p>Ed says buy 20-delta options. But what does that actually mean? Breaking down the Greeks in plain English.</p>
+        <div class="post-meta">
+          <span>Coming Soon</span>
+          <span>—</span>
+        </div>
+      </a>
+    </div>
+  </main>
+</BaseLayout>
