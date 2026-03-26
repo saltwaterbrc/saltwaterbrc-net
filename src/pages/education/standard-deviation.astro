@@ -1,0 +1,34 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+<BaseLayout title="Standard Deviation" description="The math behind probability-based trading — standard deviation explained for beginners.">
+  <main class="main-content" style="max-width: 720px;">
+    <a href="/education" style="color: #58a6ff; text-decoration: none; font-size: 0.9rem;">&larr; Back to Education</a>
+    <span class="tag education" style="display: inline-block; margin: 16px 0 8px;">Core Concept</span>
+    <h1 style="font-size: 2rem; font-weight: 800; margin-bottom: 24px;">Standard Deviation</h1>
+
+    <div class="education-content" style="color: #c9d1d9; line-height: 1.8; font-size: 1.05rem;">
+      <h2 style="color: #58a6ff; font-size: 1.3rem; margin-top: 32px;">What Is It?</h2>
+      <p>Standard deviation measures how spread out a set of data is from its average. In trading, it tells you how "unusual" a stock's move is compared to its typical behavior.</p>
+      <p>Think of it like this: if a stock normally moves $2 a day and today it moved $6, that's a 3 standard deviation move — extremely rare. If it moved $2, that's a 1 standard deviation move — totally normal.</p>
+
+      <h2 style="color: #58a6ff; font-size: 1.3rem; margin-top: 32px;">The Probability Breakdown</h2>
+      <div class="stat-card" style="margin: 16px 0;">
+        <p><strong style="color: #58a6ff;">1 Standard Deviation (1σ)</strong> — 68% of the time the stock stays within this range</p>
+        <p><strong style="color: #39d2c0;">2 Standard Deviations (2σ)</strong> — 95% of the time</p>
+        <p><strong style="color: #f0883e;">3 Standard Deviations (3σ)</strong> — 99.7% of the time</p>
+      </div>
+      <p>This is the famous "bell curve." Most stock moves cluster around the average, with extreme moves being rare but not impossible.</p>
+
+      <h2 style="color: #58a6ff; font-size: 1.3rem; margin-top: 32px;">How It Connects to Options</h2>
+      <p>The expected move of a stock (covered in the previous lesson) IS a one standard deviation move. When Tastytrade or Go Maz shows you the expected move, they're saying "there's a 68% chance the stock stays within this range."</p>
+      <p>Our 20-delta options sit roughly at the edge of one standard deviation. That means there's about a 20% chance the stock reaches our strike — which is exactly the probability/payoff balance Ed's strategy targets.</p>
+
+      <h2 style="color: #58a6ff; font-size: 1.3rem; margin-top: 32px;">Why Bigger Moves = Bigger Opportunity</h2>
+      <p>When a stock makes a 2σ or 3σ move (like a massive earnings gap or sector rotation), it often reverts back toward the mean. These are the moments where options get mispriced and opportunities appear. Go Maz flags these through its pattern detection and volume confirmation rules.</p>
+
+      <h2 style="color: #58a6ff; font-size: 1.3rem; margin-top: 32px;">The Takeaway</h2>
+      <p>Standard deviation is the backbone of probability-based trading. It tells you what's "normal" and what's "unusual." Our entire strategy — 20-delta, expected move, IVR — all sits on top of this one concept. Understand standard deviation and everything else clicks into place.</p>
+    </div>
+  </main>
+</BaseLayout>

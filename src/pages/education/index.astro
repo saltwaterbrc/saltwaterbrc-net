@@ -1,0 +1,42 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+<BaseLayout title="Education" description="Options trading concepts explained from scratch — Black-Scholes, expected move, Greeks, and more.">
+  <main class="main-content">
+    <span class="hero-tag" style="display: inline-block; margin-bottom: 12px;">Education</span>
+    <h1 style="font-size: 2rem; font-weight: 800; margin-bottom: 8px;">Options Trading <span class="accent">From Scratch</span></h1>
+    <p style="color: #8b949e; margin-bottom: 40px;">Everything I'm learning, broken down in plain English. No finance degree required.</p>
+
+    <div class="posts-grid">
+      <a href="/education/black-scholes" class="post-card" style="text-decoration: none; color: inherit;">
+        <span class="tag education">Core Concept</span>
+        <h3>Black-Scholes Model</h3>
+        <p>The formula behind options pricing. What it is, why it matters, and how Ed uses it in the Go Maz system.</p>
+      </a>
+
+      <a href="/education/expected-move" class="post-card" style="text-decoration: none; color: inherit;">
+        <span class="tag education">Core Concept</span>
+        <h3>Expected Move</h3>
+        <p>How far is a stock likely to move? Expected move tells you the range the market is pricing in — and why that matters for picking strikes.</p>
+      </a>
+
+      <a href="/education/standard-deviation" class="post-card" style="text-decoration: none; color: inherit;">
+        <span class="tag education">Core Concept</span>
+        <h3>Standard Deviation</h3>
+        <p>The math behind "how unusual is this move?" Standard deviation is the backbone of probability-based trading.</p>
+      </a>
+
+      <a href="/education/ivr" class="post-card" style="text-decoration: none; color: inherit;">
+        <span class="tag education">Core Concept</span>
+        <h3>IV Rank (IVR)</h3>
+        <p>Is volatility high or low compared to the past year? IVR tells you whether options are cheap or expensive right now.</p>
+      </a>
+
+      <a href="/education/greeks" class="post-card" style="text-decoration: none; color: inherit; opacity: 0.5;">
+        <span class="tag education">Coming Soon</span>
+        <h3>The Greeks — Delta, Theta, Vega, Gamma</h3>
+        <p>The forces that move your options price. What each Greek means and which ones matter most for 20-delta plays.</p>
+      </a>
+    </div>
+  </main>
+</BaseLayout>

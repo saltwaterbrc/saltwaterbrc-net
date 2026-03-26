@@ -1,0 +1,34 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+<BaseLayout title="Black-Scholes Model" description="The formula behind options pricing — explained in plain English for beginners.">
+  <main class="main-content" style="max-width: 720px;">
+    <a href="/education" style="color: #58a6ff; text-decoration: none; font-size: 0.9rem;">&larr; Back to Education</a>
+    <span class="tag education" style="display: inline-block; margin: 16px 0 8px;">Core Concept</span>
+    <h1 style="font-size: 2rem; font-weight: 800; margin-bottom: 24px;">Black-Scholes Model</h1>
+
+    <div class="education-content" style="color: #c9d1d9; line-height: 1.8; font-size: 1.05rem;">
+      <h2 style="color: #58a6ff; font-size: 1.3rem; margin-top: 32px;">What Is It?</h2>
+      <p>The Black-Scholes model is the standard formula used to calculate the theoretical price of an options contract. Created in 1973 by Fischer Black, Myron Scholes, and Robert Merton, it's the reason options have consistent, calculable prices instead of being pure guesswork.</p>
+      <p>Think of it like Zillow's estimate for a house — it uses known inputs to calculate a "fair" price. The market may trade above or below that price, but it gives you a baseline.</p>
+
+      <h2 style="color: #58a6ff; font-size: 1.3rem; margin-top: 32px;">The 5 Inputs</h2>
+      <p>Black-Scholes takes five things into account:</p>
+      <div class="stat-card" style="margin: 16px 0;">
+        <p><strong style="color: #58a6ff;">1. Stock Price</strong> — Where the stock is trading right now</p>
+        <p><strong style="color: #58a6ff;">2. Strike Price</strong> — The price you're betting the stock hits</p>
+        <p><strong style="color: #58a6ff;">3. Time to Expiration</strong> — How long until the option expires (more time = more expensive)</p>
+        <p><strong style="color: #58a6ff;">4. Interest Rates</strong> — The risk-free rate (Treasury yields)</p>
+        <p><strong style="color: #58a6ff;">5. Implied Volatility (IV)</strong> — How much the market expects the stock to move</p>
+      </div>
+      <p>Of these five, <strong>implied volatility</strong> is the only one that's truly variable and debatable. Everything else is a known number. That's why IV is so important — it's where the real edge is.</p>
+
+      <h2 style="color: #58a6ff; font-size: 1.3rem; margin-top: 32px;">Why It Matters for Our Strategy</h2>
+      <p>Ed's system on Go Maz uses Black-Scholes pricing to find options where the market may be mispricing risk. When IV Rank is low, options are "cheap" relative to historical volatility — meaning you're paying less for the same potential move. That's when you want to buy.</p>
+      <p>The 20-delta target we use comes directly from this model. Delta is one of the outputs of Black-Scholes, and a 20-delta option means there's roughly a 20% chance it expires in the money. Cheap enough to be affordable, but with real upside if the stock moves.</p>
+
+      <h2 style="color: #58a6ff; font-size: 1.3rem; margin-top: 32px;">The Takeaway</h2>
+      <p>You don't need to memorize the formula. What matters is understanding that options prices aren't random — they're calculated based on real inputs, and the biggest variable is how much volatility the market expects. When that expectation is low (low IVR), options are on sale.</p>
+    </div>
+  </main>
+</BaseLayout>

@@ -1,0 +1,35 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+<BaseLayout title="Expected Move" description="How far is a stock likely to move? Understanding expected move for options trading.">
+  <main class="main-content" style="max-width: 720px;">
+    <a href="/education" style="color: #58a6ff; text-decoration: none; font-size: 0.9rem;">&larr; Back to Education</a>
+    <span class="tag education" style="display: inline-block; margin: 16px 0 8px;">Core Concept</span>
+    <h1 style="font-size: 2rem; font-weight: 800; margin-bottom: 24px;">Expected Move</h1>
+
+    <div class="education-content" style="color: #c9d1d9; line-height: 1.8; font-size: 1.05rem;">
+      <h2 style="color: #39d2c0; font-size: 1.3rem; margin-top: 32px;">What Is It?</h2>
+      <p>Expected move is the range a stock is likely to trade within over a given time period, based on current implied volatility. It's the market's best guess at how far a stock will move — up or down — before your option expires.</p>
+      <p>For example, if NVDA is at $120 and the expected move for 120 days is ±$15, the market is saying NVDA will most likely trade between $105 and $135 over that period.</p>
+
+      <h2 style="color: #39d2c0; font-size: 1.3rem; margin-top: 32px;">How It's Calculated</h2>
+      <p>The formula is straightforward:</p>
+      <div class="stat-card" style="margin: 16px 0; text-align: center; font-size: 1.2rem;">
+        <p><strong>Expected Move = Stock Price × IV × √(Days to Expiry / 365)</strong></p>
+      </div>
+      <p>So if a stock is $100, IV is 30% (0.30), and you're looking at 120 days:</p>
+      <div class="stat-card" style="margin: 16px 0;">
+        <p>$100 × 0.30 × √(120/365) = $100 × 0.30 × 0.573 = <strong style="color: #39d2c0;">±$17.19</strong></p>
+        <p style="color: #8b949e; font-size: 0.9rem;">Expected range: $82.81 to $117.19</p>
+      </div>
+      <p>This is a one standard deviation move — meaning there's about a 68% probability the stock stays within this range.</p>
+
+      <h2 style="color: #39d2c0; font-size: 1.3rem; margin-top: 32px;">Why It Matters for 120-Day Options</h2>
+      <p>With our 120-day timeframe, we get a wider expected move than the short-term traders. This is actually an advantage — more time means more room for the trade to work, and time decay (theta) erodes more slowly on longer-dated options.</p>
+      <p>When picking strikes, you want your target to be <em>within</em> the expected move — that's where the highest probability trades live. A 20-delta strike typically sits right around the edge of the expected move, giving you a good risk/reward balance.</p>
+
+      <h2 style="color: #39d2c0; font-size: 1.3rem; margin-top: 32px;">The Takeaway</h2>
+      <p>Expected move tells you the playing field. If you're buying a call with a strike way beyond the expected move, you're betting on an outlier event. Stick within the range, pick your 20-delta strike, and let probability do the work.</p>
+    </div>
+  </main>
+</BaseLayout>

@@ -1,0 +1,35 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+<BaseLayout title="IV Rank (IVR)" description="Is volatility high or low? IV Rank tells you whether options are cheap or expensive right now.">
+  <main class="main-content" style="max-width: 720px;">
+    <a href="/education" style="color: #58a6ff; text-decoration: none; font-size: 0.9rem;">&larr; Back to Education</a>
+    <span class="tag education" style="display: inline-block; margin: 16px 0 8px;">Core Concept</span>
+    <h1 style="font-size: 2rem; font-weight: 800; margin-bottom: 24px;">IV Rank (IVR)</h1>
+
+    <div class="education-content" style="color: #c9d1d9; line-height: 1.8; font-size: 1.05rem;">
+      <h2 style="color: #39d2c0; font-size: 1.3rem; margin-top: 32px;">What Is It?</h2>
+      <p>IV Rank (IVR) tells you where current implied volatility sits compared to the past 52 weeks. It answers one question: "Are options cheap or expensive right now compared to the recent past?"</p>
+      <p>IVR runs from 0 to 100. An IVR of 20 means current IV is near the low end of its yearly range — options are relatively cheap. An IVR of 80 means IV is elevated — options are expensive.</p>
+
+      <h2 style="color: #39d2c0; font-size: 1.3rem; margin-top: 32px;">IVR vs IV — What's the Difference?</h2>
+      <div class="stat-card" style="margin: 16px 0;">
+        <p><strong style="color: #39d2c0;">IV (Implied Volatility)</strong> — The raw number. NVDA might have 35% IV. But is that high or low for NVDA? Hard to say without context.</p>
+        <p><strong style="color: #58a6ff;">IVR (IV Rank)</strong> — The context. If NVDA's IV ranged from 25% to 60% over the past year, and it's currently at 35%, that's an IVR of about 29. Now you know — it's on the lower end.</p>
+      </div>
+      <p>The formula: <strong>IVR = (Current IV − 52-Week Low IV) / (52-Week High IV − 52-Week Low IV) × 100</strong></p>
+
+      <h2 style="color: #39d2c0; font-size: 1.3rem; margin-top: 32px;">Why Ed Watches IVR</h2>
+      <p>For our strategy (buying 20-delta options), we want <strong>low IVR</strong>. Here's why:</p>
+      <p>When IVR is low, options are cheap relative to their historical range. You're paying less premium for the same potential move. If volatility expands after you buy (IVR goes up), your option gains value from the IV increase on top of any directional move.</p>
+      <p>Go Maz flags IVR as one of its core rules. A "pass" on IV Rank Favorable means the current IVR creates a good entry point for buying options.</p>
+
+      <h2 style="color: #39d2c0; font-size: 1.3rem; margin-top: 32px;">5-Day IVR Change</h2>
+      <p>The 5-day IVR change shows the trend — is volatility rising or falling? A dropping IVR over 5 days means options are getting cheaper (potentially better entry). A rising IVR means the window may be closing.</p>
+      <p>On Tastytrade, you can add IVR and IVR change columns to your watchlist to track this across all your tickers at a glance.</p>
+
+      <h2 style="color: #39d2c0; font-size: 1.3rem; margin-top: 32px;">The Takeaway</h2>
+      <p>IVR is your "options are on sale" indicator. Low IVR + good chart pattern + 20-delta strike + 120-day expiry = Ed's sweet spot. It's one of the most important filters in the Go Maz screener for a reason.</p>
+    </div>
+  </main>
+</BaseLayout>
