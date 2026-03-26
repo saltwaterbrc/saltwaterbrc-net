@@ -1,8 +1,32 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
   <rect width="64" height="64" rx="12" fill="#0d1117"/>
-  <text x="50%" y="54%" dominant-baseline="middle" text-anchor="middle" font-family="Arial Black, sans-serif" font-weight="900" font-size="28" fill="url(#grad)">SW</text>
+  <rect width="64" height="2.5" rx="1" fill="url(#bar)"/>
+  <!-- Bird body -->
+  <ellipse cx="32" cy="34" rx="12" ry="15" fill="#e0e0e0"/>
+  <!-- Left wing -->
+  <path d="M20 29 Q10 24 6 31 Q9 34 14 35 Q17 35 20 34 Z" fill="#58a6ff"/>
+  <!-- Right wing -->
+  <path d="M44 29 Q54 24 58 31 Q55 34 50 35 Q47 35 44 34 Z" fill="#58a6ff"/>
+  <!-- Head -->
+  <circle cx="32" cy="22" r="7.5" fill="#f0f0f0"/>
+  <!-- Eyes -->
+  <circle cx="29" cy="21" r="2" fill="#0d1117"/>
+  <circle cx="35" cy="21" r="2" fill="#0d1117"/>
+  <circle cx="29.4" cy="20.3" r="0.7" fill="white"/>
+  <circle cx="35.4" cy="20.3" r="0.7" fill="white"/>
+  <!-- Beak -->
+  <path d="M30.5 25 L32 29 L33.5 25 Z" fill="#39d2c0"/>
+  <!-- Feet -->
+  <line x1="28" y1="48" x2="26" y2="53" stroke="#484f58" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="26" y1="53" x2="24" y2="54" stroke="#484f58" stroke-width="1" stroke-linecap="round"/>
+  <line x1="26" y1="53" x2="26" y2="55" stroke="#484f58" stroke-width="1" stroke-linecap="round"/>
+  <line x1="26" y1="53" x2="28" y2="54" stroke="#484f58" stroke-width="1" stroke-linecap="round"/>
+  <line x1="36" y1="48" x2="38" y2="53" stroke="#484f58" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="38" y1="53" x2="36" y2="54" stroke="#484f58" stroke-width="1" stroke-linecap="round"/>
+  <line x1="38" y1="53" x2="38" y2="55" stroke="#484f58" stroke-width="1" stroke-linecap="round"/>
+  <line x1="38" y1="53" x2="40" y2="54" stroke="#484f58" stroke-width="1" stroke-linecap="round"/>
   <defs>
-    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="0%">
+    <linearGradient id="bar" x1="0%" y1="0%" x2="100%" y2="0%">
       <stop offset="0%" style="stop-color:#58a6ff"/>
       <stop offset="100%" style="stop-color:#39d2c0"/>
     </linearGradient>

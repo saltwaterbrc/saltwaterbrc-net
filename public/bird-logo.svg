@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <!-- Body -->
+  <ellipse cx="100" cy="105" rx="38" ry="48" fill="#e8e8e8"/>
+  <!-- Left wing -->
+  <path d="M62 90 Q30 75 18 95 Q25 105 40 108 Q50 108 62 105 Z" fill="#58a6ff"/>
+  <!-- Right wing -->
+  <path d="M138 90 Q170 75 182 95 Q175 105 160 108 Q150 108 138 105 Z" fill="#58a6ff"/>
+  <!-- Wing inner shade -->
+  <path d="M62 95 Q38 85 25 98 Q32 105 45 107 Q52 106 62 103 Z" fill="#3d8bdb"/>
+  <path d="M138 95 Q162 85 175 98 Q168 105 155 107 Q148 106 138 103 Z" fill="#3d8bdb"/>
+  <!-- Head -->
+  <circle cx="100" cy="68" r="22" fill="#f0f0f0"/>
+  <!-- Eyes -->
+  <circle cx="91" cy="63" r="6" fill="#0d1117"/>
+  <circle cx="109" cy="63" r="6" fill="#0d1117"/>
+  <circle cx="92" cy="61" r="2" fill="white"/>
+  <circle cx="110" cy="61" r="2" fill="white"/>
+  <!-- Beak -->
+  <path d="M96 72 L100 82 L104 72 Z" fill="#39d2c0"/>
+  <!-- Feet -->
+  <line x1="90" y1="150" x2="85" y2="165" stroke="#484f58" stroke-width="3" stroke-linecap="round"/>
+  <line x1="85" y1="165" x2="78" y2="168" stroke="#484f58" stroke-width="2" stroke-linecap="round"/>
+  <line x1="85" y1="165" x2="85" y2="170" stroke="#484f58" stroke-width="2" stroke-linecap="round"/>
+  <line x1="85" y1="165" x2="91" y2="168" stroke="#484f58" stroke-width="2" stroke-linecap="round"/>
+  <line x1="110" y1="150" x2="115" y2="165" stroke="#484f58" stroke-width="3" stroke-linecap="round"/>
+  <line x1="115" y1="165" x2="108" y2="168" stroke="#484f58" stroke-width="2" stroke-linecap="round"/>
+  <line x1="115" y1="165" x2="115" y2="170" stroke="#484f58" stroke-width="2" stroke-linecap="round"/>
+  <line x1="115" y1="165" x2="121" y2="168" stroke="#484f58" stroke-width="2" stroke-linecap="round"/>
+  <!-- Tail feathers -->
+  <path d="M90 148 Q85 160 80 155" stroke="#8b949e" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <path d="M100 150 Q100 163 100 158" stroke="#8b949e" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <path d="M110 148 Q115 160 120 155" stroke="#8b949e" stroke-width="2" fill="none" stroke-linecap="round"/>
+</svg>
