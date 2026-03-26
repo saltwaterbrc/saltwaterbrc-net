@@ -1,0 +1,202 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+<BaseLayout title="Support & Resistance" description="How invisible price walls work — why stocks bounce at certain levels and what happens when they break through.">
+  <main class="main-content" style="max-width: 720px;">
+    <a href="/education" style="color: #58a6ff; text-decoration: none; font-size: 0.9rem;">&larr; Back to Education</a>
+    <span class="tag education" style="display: inline-block; margin: 16px 0 8px;">Charting</span>
+    <h1 style="font-size: 2rem; font-weight: 800; margin-bottom: 24px;">Support & Resistance</h1>
+
+    <div class="education-content" style="color: #c9d1d9; line-height: 1.8; font-size: 1.05rem;">
+      <h2 style="color: #39d2c0; font-size: 1.3rem; margin-top: 32px;">What Are They?</h2>
+      <p>Think of a stock chart like a ball bouncing in a room. The <strong style="color: #3fb950;">floor is support</strong> — every time the ball hits it, it bounces back up. The <strong style="color: #f85149;">ceiling is resistance</strong> — every time the ball hits it, it gets knocked back down.</p>
+      <p>These levels aren't random. They exist because massive institutional algorithms — Vanguard, BlackRock, Fidelity, the ETF rebalancers — have programmed buy and sell orders at specific price levels.</p>
+
+      <!-- CHART 1: Bouncing Between Walls -->
+      <h2 style="color: #39d2c0; font-size: 1.3rem; margin-top: 40px;">Price Bouncing Between Walls</h2>
+      <p>Here's what it looks like using real PLTR levels. The stock bounces between ~$147 support and ~$165 resistance:</p>
+
+      <svg viewBox="0 0 700 350" xmlns="http://www.w3.org/2000/svg" style="width: 100%; margin: 24px 0; border-radius: 8px; background: #0d1117;">
+        <rect width="700" height="350" fill="#0d1117" rx="8"/>
+        <line x1="55" y1="50" x2="660" y2="50" stroke="#21262d" stroke-width="1"/>
+        <line x1="55" y1="110" x2="660" y2="110" stroke="#21262d" stroke-width="1"/>
+        <line x1="55" y1="170" x2="660" y2="170" stroke="#21262d" stroke-width="1"/>
+        <line x1="55" y1="230" x2="660" y2="230" stroke="#21262d" stroke-width="1"/>
+        <line x1="55" y1="290" x2="660" y2="290" stroke="#21262d" stroke-width="1"/>
+        <text x="48" y="55" fill="#8b949e" font-size="10" text-anchor="end" font-family="system-ui">$170</text>
+        <text x="48" y="115" fill="#8b949e" font-size="10" text-anchor="end" font-family="system-ui">$165</text>
+        <text x="48" y="175" fill="#8b949e" font-size="10" text-anchor="end" font-family="system-ui">$155</text>
+        <text x="48" y="235" fill="#8b949e" font-size="10" text-anchor="end" font-family="system-ui">$147</text>
+        <text x="48" y="295" fill="#8b949e" font-size="10" text-anchor="end" font-family="system-ui">$140</text>
+        <!-- Resistance zone -->
+        <rect x="55" y="95" width="605" height="30" fill="#f8514918" rx="4"/>
+        <line x1="55" y1="110" x2="660" y2="110" stroke="#f85149" stroke-width="2" stroke-dasharray="8,4"/>
+        <text x="667" y="107" fill="#f85149" font-size="10" font-weight="bold" text-anchor="start" font-family="system-ui">RESISTANCE</text>
+        <text x="667" y="120" fill="#f8514980" font-size="9" text-anchor="start" font-family="system-ui">~$165 ceiling</text>
+        <!-- Support zone -->
+        <rect x="55" y="215" width="605" height="30" fill="#3fb95018" rx="4"/>
+        <line x1="55" y1="230" x2="660" y2="230" stroke="#3fb950" stroke-width="2" stroke-dasharray="8,4"/>
+        <text x="667" y="227" fill="#3fb950" font-size="10" font-weight="bold" text-anchor="start" font-family="system-ui">SUPPORT</text>
+        <text x="667" y="240" fill="#3fb95080" font-size="9" text-anchor="start" font-family="system-ui">~$147 floor</text>
+        <!-- Price line -->
+        <polyline points="75,170 120,140 155,115 185,120 225,165 265,210 295,225 325,220 365,175 405,140 435,115 465,125 505,170 545,210 575,228 605,222 635,210 650,228"
+          fill="none" stroke="#58a6ff" stroke-width="2.5" stroke-linejoin="round"/>
+        <!-- Bounce labels at resistance -->
+        <circle cx="155" cy="115" r="5" fill="none" stroke="#f85149" stroke-width="2"/>
+        <text x="155" y="100" fill="#f85149" font-size="9" text-anchor="middle" font-family="system-ui">SELL</text>
+        <circle cx="435" cy="115" r="5" fill="none" stroke="#f85149" stroke-width="2"/>
+        <text x="435" y="100" fill="#f85149" font-size="9" text-anchor="middle" font-family="system-ui">SELL</text>
+        <!-- Bounce labels at support -->
+        <circle cx="295" cy="225" r="5" fill="none" stroke="#3fb950" stroke-width="2"/>
+        <text x="295" y="248" fill="#3fb950" font-size="9" text-anchor="middle" font-family="system-ui">BUY</text>
+        <circle cx="575" cy="228" r="5" fill="none" stroke="#3fb950" stroke-width="2"/>
+        <text x="575" y="248" fill="#3fb950" font-size="9" text-anchor="middle" font-family="system-ui">BUY</text>
+        <circle cx="650" cy="228" r="5" fill="none" stroke="#d29922" stroke-width="2"/>
+        <text x="650" y="248" fill="#d29922" font-size="9" text-anchor="middle" font-family="system-ui">TODAY</text>
+        <text x="370" y="28" fill="#e6edf3" font-size="13" font-weight="bold" text-anchor="middle" font-family="system-ui">PLTR — Bouncing Between Invisible Walls</text>
+      </svg>
+
+      <p>Every time PLTR rises to ~$165, sellers knock it back down. Every time it falls to ~$147, buyers catch it. The stock is trapped between these two walls. The yellow dot is where PLTR sits today — right on the floor.</p>
+
+      <!-- CHART 2: Who's at each level -->
+      <h2 style="color: #39d2c0; font-size: 1.3rem; margin-top: 40px;">Why These Walls Exist</h2>
+      <p>Support and resistance aren't random lines. They exist because big institutional money — the algorithms at Vanguard, BlackRock, Fidelity — have programmed automatic buy and sell orders at these levels.</p>
+
+      <svg viewBox="0 0 700 300" xmlns="http://www.w3.org/2000/svg" style="width: 100%; margin: 24px 0; border-radius: 8px; background: #0d1117;">
+        <rect width="700" height="300" fill="#0d1117" rx="8"/>
+        <!-- Resistance box -->
+        <rect x="30" y="15" width="640" height="115" fill="#161b22" rx="8" stroke="#f85149" stroke-width="1"/>
+        <text x="350" y="42" fill="#f85149" font-size="14" font-weight="bold" text-anchor="middle" font-family="system-ui">RESISTANCE — $165 (The Ceiling)</text>
+        <text x="350" y="62" fill="#c9d1d9" font-size="11" text-anchor="middle" font-family="system-ui">Algorithms say: "PLTR is overvalued here. SELL."</text>
+        <rect x="60" y="78" width="130" height="36" fill="#21262d" rx="6"/>
+        <text x="125" y="100" fill="#e6edf3" font-size="10" text-anchor="middle" font-family="system-ui">BlackRock sells 1.5M</text>
+        <rect x="205" y="78" width="130" height="36" fill="#21262d" rx="6"/>
+        <text x="270" y="100" fill="#e6edf3" font-size="10" text-anchor="middle" font-family="system-ui">Hedge funds trim</text>
+        <rect x="350" y="78" width="130" height="36" fill="#21262d" rx="6"/>
+        <text x="415" y="100" fill="#e6edf3" font-size="10" text-anchor="middle" font-family="system-ui">ETF rebalance sell</text>
+        <rect x="495" y="78" width="130" height="36" fill="#21262d" rx="6"/>
+        <text x="560" y="100" fill="#e6edf3" font-size="10" text-anchor="middle" font-family="system-ui">Profit-takers exit</text>
+        <!-- Arrow down -->
+        <polygon points="350,140 335,155 345,155 345,170 355,170 355,155 365,155" fill="#f85149"/>
+        <text x="380" y="162" fill="#f85149" font-size="10" font-family="system-ui">Price pushed DOWN</text>
+        <!-- Support box -->
+        <rect x="30" y="180" width="640" height="115" fill="#161b22" rx="8" stroke="#3fb950" stroke-width="1"/>
+        <text x="350" y="207" fill="#3fb950" font-size="14" font-weight="bold" text-anchor="middle" font-family="system-ui">SUPPORT — $147 (The Floor)</text>
+        <text x="350" y="227" fill="#c9d1d9" font-size="11" text-anchor="middle" font-family="system-ui">Algorithms say: "PLTR is undervalued here. BUY."</text>
+        <rect x="60" y="243" width="130" height="36" fill="#21262d" rx="6"/>
+        <text x="125" y="265" fill="#e6edf3" font-size="10" text-anchor="middle" font-family="system-ui">Vanguard buys 2M</text>
+        <rect x="205" y="243" width="130" height="36" fill="#21262d" rx="6"/>
+        <text x="270" y="265" fill="#e6edf3" font-size="10" text-anchor="middle" font-family="system-ui">Fidelity adds shares</text>
+        <rect x="350" y="243" width="130" height="36" fill="#21262d" rx="6"/>
+        <text x="415" y="265" fill="#e6edf3" font-size="10" text-anchor="middle" font-family="system-ui">ETF rebalance buy</text>
+        <rect x="495" y="243" width="130" height="36" fill="#21262d" rx="6"/>
+        <text x="560" y="265" fill="#e6edf3" font-size="10" text-anchor="middle" font-family="system-ui">Dip buyers step in</text>
+      </svg>
+
+      <p>When PLTR hits $147, algorithms at multiple institutions fire buy orders simultaneously. Millions of shares change hands. That's what creates the "bounce" — real money defending the level.</p>
+
+      <h2 style="color: #39d2c0; font-size: 1.3rem; margin-top: 40px;">How to Find Support & Resistance (Ed's Method)</h2>
+      <p>Ed's method is straightforward. Start at the <strong>lowest point</strong> on the chart — that's your first support. Find the <strong>next high</strong> after that low — that's your first resistance. Keep going: next low = new support, next high = new resistance. Connect the dots.</p>
+      <p>The key insight: <strong>the more times a price level gets touched, the more significant it is.</strong> If PLTR bounced off $147 once, that's minor support. If it bounced off $147 four different times over six months, that's major support — a lot of institutional money is parked at that level.</p>
+
+      <div class="stat-card" style="margin: 20px 0;">
+        <p><strong style="color: #3fb950;">Major S&R:</strong> Long-term trends, heavy volume at those levels, multiple touch points across different time periods. Ed changes line colors for major levels.</p>
+        <p style="margin-top: 8px;"><strong style="color: #8b949e;">Minor S&R:</strong> Shorter-term bounces, light volume. Stock quickly resumes its trend. Less reliable.</p>
+        <p style="margin-top: 8px;"><strong style="color: #58a6ff;">Volume confirms it:</strong> If the bounce happens on heavy volume, it's major (big money defending the level). Light volume bounce = minor (could break through next time).</p>
+      </div>
+
+      <!-- CHART 3: What happens when support breaks -->
+      <h2 style="color: #39d2c0; font-size: 1.3rem; margin-top: 40px;">When Support Breaks — The Floor Becomes the Ceiling</h2>
+      <p>This is where it gets interesting for options traders. When something changes the math — bad earnings, sector repricing, a shift in sentiment — the big money reprogram their levels. The old floor disappears and nobody's there to catch the stock anymore.</p>
+
+      <svg viewBox="0 0 700 380" xmlns="http://www.w3.org/2000/svg" style="width: 100%; margin: 24px 0; border-radius: 8px; background: #0d1117;">
+        <rect width="700" height="380" fill="#0d1117" rx="8"/>
+        <text x="350" y="28" fill="#e6edf3" font-size="13" font-weight="bold" text-anchor="middle" font-family="system-ui">The Floor Becomes The Ceiling</text>
+        <line x1="55" y1="70" x2="490" y2="70" stroke="#21262d" stroke-width="1"/>
+        <line x1="55" y1="140" x2="660" y2="140" stroke="#21262d" stroke-width="1"/>
+        <line x1="55" y1="210" x2="660" y2="210" stroke="#21262d" stroke-width="1"/>
+        <line x1="55" y1="280" x2="660" y2="280" stroke="#21262d" stroke-width="1"/>
+        <text x="48" y="75" fill="#8b949e" font-size="10" text-anchor="end" font-family="system-ui">$165</text>
+        <text x="48" y="145" fill="#8b949e" font-size="10" text-anchor="end" font-family="system-ui">$147</text>
+        <text x="48" y="215" fill="#8b949e" font-size="10" text-anchor="end" font-family="system-ui">$130</text>
+        <text x="48" y="285" fill="#8b949e" font-size="10" text-anchor="end" font-family="system-ui">$120</text>
+        <!-- Phase 1: support holds -->
+        <rect x="55" y="127" width="250" height="26" fill="#3fb95012" rx="4"/>
+        <line x1="55" y1="140" x2="305" y2="140" stroke="#3fb950" stroke-width="2" stroke-dasharray="6,3"/>
+        <text x="175" y="172" fill="#3fb950" font-size="9" text-anchor="middle" font-family="system-ui">SUPPORT HOLDS</text>
+        <!-- Price bouncing (left) -->
+        <polyline points="75,90 110,115 140,135 165,130 200,108 235,128 275,137 305,133"
+          fill="none" stroke="#58a6ff" stroke-width="2.5" stroke-linejoin="round"/>
+        <circle cx="140" cy="135" r="4" fill="none" stroke="#3fb950" stroke-width="2"/>
+        <circle cx="275" cy="137" r="4" fill="none" stroke="#3fb950" stroke-width="2"/>
+        <!-- Break point -->
+        <line x1="330" y1="45" x2="330" y2="360" stroke="#d29922" stroke-width="1" stroke-dasharray="4,4"/>
+        <text x="330" y="42" fill="#d29922" font-size="11" font-weight="bold" text-anchor="middle" font-family="system-ui">BREAK!</text>
+        <!-- Phase 2: old support = new resistance -->
+        <rect x="370" y="127" width="290" height="26" fill="#f8514912" rx="4"/>
+        <line x1="370" y1="140" x2="660" y2="140" stroke="#f85149" stroke-width="2" stroke-dasharray="6,3"/>
+        <text x="590" y="120" fill="#f85149" font-size="9" text-anchor="middle" font-family="system-ui">$147 IS NOW RESISTANCE</text>
+        <!-- Price crashing then getting rejected -->
+        <polyline points="305,133 330,140 355,158 380,190 410,225 435,210 460,180 478,147 488,144 500,152 530,195 565,245 600,272 635,283"
+          fill="none" stroke="#58a6ff" stroke-width="2.5" stroke-linejoin="round"/>
+        <circle cx="488" cy="144" r="5" fill="none" stroke="#f85149" stroke-width="2"/>
+        <text x="510" y="92" fill="#f85149" font-size="8" text-anchor="middle" font-family="system-ui">REJECTED</text>
+        <line x1="495" y1="96" x2="490" y2="138" stroke="#f85149" stroke-width="0.8" stroke-dasharray="2,2"/>
+        <text x="510" y="82" fill="#8b949e" font-size="7" text-anchor="middle" font-family="system-ui">can't get back above $147</text>
+        <!-- New support -->
+        <rect x="370" y="200" width="290" height="22" fill="#3fb95012" rx="4"/>
+        <line x1="370" y1="210" x2="660" y2="210" stroke="#3fb950" stroke-width="1.5" stroke-dasharray="6,3"/>
+        <text x="520" y="237" fill="#3fb950" font-size="9" text-anchor="middle" font-family="system-ui">NEW SUPPORT ~$130</text>
+        <!-- $120 strike line -->
+        <line x1="55" y1="280" x2="660" y2="280" stroke="#d29922" stroke-width="2" stroke-dasharray="4,4"/>
+        <text x="620" y="298" fill="#d29922" font-size="10" font-weight="bold" text-anchor="middle" font-family="system-ui">YOUR STRIKE: $120</text>
+        <text x="620" y="312" fill="#d29922" font-size="9" text-anchor="middle" font-family="system-ui">Closer = more $$$</text>
+      </svg>
+
+      <p>Once $147 breaks, the same algorithms that used to buy there flip to selling. The stock might try to rally back to $147, but now it gets <strong>rejected</strong> — old floor, new ceiling. The next support level below becomes the target.</p>
+      <p>This is Ed's thesis on PLTR right now. He's watching for an inverted cup and handle pattern on the 3-year weekly chart. If PLTR breaks below the $147 support on heavy volume, the next move could take it toward $130 or lower.</p>
+
+      <!-- CHART 4: How it connects to your trade -->
+      <h2 style="color: #39d2c0; font-size: 1.3rem; margin-top: 40px;">How This Connects to Your Options Trade</h2>
+      <p>If you're holding a put option, support and resistance directly affect your P&L. The stock moving <em>toward</em> your strike makes you money. Support breaking is the catalyst.</p>
+
+      <svg viewBox="0 0 700 260" xmlns="http://www.w3.org/2000/svg" style="width: 100%; margin: 24px 0; border-radius: 8px; background: #0d1117;">
+        <rect width="700" height="260" fill="#0d1117" rx="8"/>
+        <!-- The thermometer bar -->
+        <rect x="80" y="90" width="540" height="55" fill="#161b22" rx="8" stroke="#30363d" stroke-width="1"/>
+        <!-- Green zone (left) -->
+        <rect x="80" y="90" width="180" height="55" fill="#3fb95025" rx="8"/>
+        <!-- Red zone (right) -->
+        <rect x="440" y="90" width="180" height="55" fill="#f8514925" style="border-radius: 0 8px 8px 0;"/>
+        <!-- Labels -->
+        <text x="80" y="80" fill="#d29922" font-size="12" font-weight="bold" text-anchor="middle" font-family="system-ui">$120</text>
+        <text x="80" y="68" fill="#d29922" font-size="9" text-anchor="middle" font-family="system-ui">Your Strike</text>
+        <text x="350" y="80" fill="#3fb950" font-size="12" font-weight="bold" text-anchor="middle" font-family="system-ui">$147</text>
+        <text x="350" y="68" fill="#3fb950" font-size="9" text-anchor="middle" font-family="system-ui">Support</text>
+        <text x="620" y="80" fill="#f85149" font-size="12" font-weight="bold" text-anchor="middle" font-family="system-ui">$165</text>
+        <text x="620" y="68" fill="#f85149" font-size="9" text-anchor="middle" font-family="system-ui">Resistance</text>
+        <!-- Current price -->
+        <line x1="355" y1="85" x2="355" y2="150" stroke="#58a6ff" stroke-width="3"/>
+        <circle cx="355" cy="117" r="7" fill="#58a6ff"/>
+        <text x="355" y="165" fill="#58a6ff" font-size="13" font-weight="bold" text-anchor="middle" font-family="system-ui">$147.57</text>
+        <text x="355" y="180" fill="#58a6ff" font-size="10" text-anchor="middle" font-family="system-ui">PLTR TODAY</text>
+        <!-- Arrows -->
+        <polygon points="180,117 205,105 205,111 310,111 310,123 205,123 205,129" fill="#3fb95050"/>
+        <text x="245" y="120" fill="#3fb950" font-size="9" font-weight="bold" text-anchor="middle" font-family="system-ui">PUT WINS</text>
+        <polygon points="530,117 505,105 505,111 400,111 400,123 505,123 505,129" fill="#f8514950"/>
+        <text x="465" y="120" fill="#f85149" font-size="9" font-weight="bold" text-anchor="middle" font-family="system-ui">PUT LOSES</text>
+        <!-- Bottom boxes -->
+        <rect x="120" y="200" width="190" height="42" fill="#161b22" rx="6" stroke="#3fb950" stroke-width="1"/>
+        <text x="215" y="218" fill="#3fb950" font-size="10" font-weight="bold" text-anchor="middle" font-family="system-ui">If support breaks ($147)</text>
+        <text x="215" y="232" fill="#c9d1d9" font-size="9" text-anchor="middle" font-family="system-ui">Put accelerates toward $120 strike</text>
+        <rect x="390" y="200" width="190" height="42" fill="#161b22" rx="6" stroke="#f85149" stroke-width="1"/>
+        <text x="485" y="218" fill="#f85149" font-size="10" font-weight="bold" text-anchor="middle" font-family="system-ui">If support holds ($147)</text>
+        <text x="485" y="232" fill="#c9d1d9" font-size="9" text-anchor="middle" font-family="system-ui">Stock bounces, put gives back gains</text>
+      </svg>
+
+      <h2 style="color: #39d2c0; font-size: 1.3rem; margin-top: 40px;">The Takeaway</h2>
+      <p>Support and resistance are the map. They tell you where the big money sits, where the stock is likely to bounce, and where it might break through. Ed draws these lines on every chart before taking a trade — they're the foundation of everything else.</p>
+      <p>When you combine support & resistance levels with the <a href="/education/ivr" style="color: #58a6ff;">Go Maz scoring rules</a>, <a href="/education/expected-move" style="color: #58a6ff;">expected move</a>, and <a href="/education/standard-deviation" style="color: #58a6ff;">standard deviation</a>, you get a complete picture of whether a trade is worth taking — and where to get in and out.</p>
+    </div>
+  </main>
+</BaseLayout>
