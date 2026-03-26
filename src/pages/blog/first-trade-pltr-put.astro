@@ -1,0 +1,327 @@
+---
+import BlogPost from '../../layouts/BlogPost.astro';
+---
+<BlogPost title="My First Trade — PLTR $120 Put" date="March 26, 2026" tag="trade" description="Breaking down my first ever options trade in the simplest terms possible. What's a put, how do I track it, and why PLTR?">
+
+<p>I did it. I placed my first real options trade with real money. Let me break down exactly what happened, what I bought, and — most importantly — how I'm supposed to track whether it's winning or losing.</p>
+
+<h2>What I Bought</h2>
+
+<div class="stats-row">
+  <div class="stat-card">
+    <div class="stat-value">PLTR</div>
+    <div class="stat-label">Palantir Technologies</div>
+  </div>
+  <div class="stat-card">
+    <div class="stat-value">$120 PUT</div>
+    <div class="stat-label">Strike Price</div>
+  </div>
+  <div class="stat-card">
+    <div class="stat-value">Jul 17</div>
+    <div class="stat-label">Expiration (113 Days)</div>
+  </div>
+  <div class="stat-card">
+    <div class="stat-value">$635</div>
+    <div class="stat-label">What I Paid (Premium)</div>
+  </div>
+</div>
+
+<h2>What Is a Put Option? (The Simplest Explanation)</h2>
+
+<p>A <strong>put option</strong> is a bet that a stock's price will go <strong>down</strong>.</p>
+
+<p>Think of it like buying insurance against a stock. When you buy a put, you're buying the <em>right</em> to sell 100 shares of a stock at a specific price (the "strike price") by a specific date. You don't need to own the shares — you just need the stock to drop.</p>
+
+<div class="callout info">
+  <div class="callout-title">Analogy — The Concert Ticket</div>
+  <p>Imagine you think a concert is going to get cancelled. You buy a "refund guarantee" for $20 that lets you sell a $120 ticket at face value no matter what. If the concert gets cancelled and tickets become worthless, your $20 guarantee is now worth $120. If the concert happens and tickets stay at $120, your guarantee expires worthless — you just lose the $20 you paid.</p>
+</div>
+
+<p>That's exactly what a put option is. I paid <strong>$635</strong> for the right to "sell" PLTR at <strong>$120/share</strong>. If PLTR drops significantly below $120, that right becomes very valuable. If PLTR stays above $120, my $635 goes to zero.</p>
+
+<h2>Why PLTR? What Go Maz Said</h2>
+
+<p>I didn't pick PLTR randomly. Go Maz scored it <strong>75% with 6 out of 7 rules passing</strong>:</p>
+
+<div style="margin: 24px 0; overflow-x: auto;">
+  <svg viewBox="0 0 700 200" xmlns="http://www.w3.org/2000/svg" style="width: 100%; max-width: 700px; display: block; margin: 0 auto;">
+    <!-- Background -->
+    <rect width="700" height="200" rx="12" fill="#1c2333"/>
+    <text x="350" y="30" text-anchor="middle" fill="#8b949e" font-family="Inter, sans-serif" font-size="13" font-weight="600" letter-spacing="1">GO MAZ RULE CHECK — PLTR</text>
+
+    <!-- Rule dots row -->
+    <g transform="translate(50, 60)">
+      <!-- Rule 1 - Pass -->
+      <circle cx="0" cy="0" r="14" fill="rgba(63,185,80,0.2)" stroke="#3fb950" stroke-width="2"/>
+      <text x="0" y="4" text-anchor="middle" fill="#3fb950" font-family="Inter, sans-serif" font-size="11" font-weight="700">✓</text>
+      <text x="0" y="30" text-anchor="middle" fill="#8b949e" font-family="Inter, sans-serif" font-size="9">Options</text>
+      <text x="0" y="40" text-anchor="middle" fill="#8b949e" font-family="Inter, sans-serif" font-size="9">Vol</text>
+
+      <!-- Rule 2 - Pass -->
+      <circle cx="100" cy="0" r="14" fill="rgba(63,185,80,0.2)" stroke="#3fb950" stroke-width="2"/>
+      <text x="100" y="4" text-anchor="middle" fill="#3fb950" font-family="Inter, sans-serif" font-size="11" font-weight="700">✓</text>
+      <text x="100" y="30" text-anchor="middle" fill="#8b949e" font-family="Inter, sans-serif" font-size="9">IV Rank</text>
+      <text x="100" y="40" text-anchor="middle" fill="#8b949e" font-family="Inter, sans-serif" font-size="9">Favorable</text>
+
+      <!-- Rule 3 - Pass -->
+      <circle cx="200" cy="0" r="14" fill="rgba(63,185,80,0.2)" stroke="#3fb950" stroke-width="2"/>
+      <text x="200" y="4" text-anchor="middle" fill="#3fb950" font-family="Inter, sans-serif" font-size="11" font-weight="700">✓</text>
+      <text x="200" y="30" text-anchor="middle" fill="#8b949e" font-family="Inter, sans-serif" font-size="9">Near</text>
+      <text x="200" y="40" text-anchor="middle" fill="#8b949e" font-family="Inter, sans-serif" font-size="9">S/R Level</text>
+
+      <!-- Rule 4 - Pass -->
+      <circle cx="300" cy="0" r="14" fill="rgba(63,185,80,0.2)" stroke="#3fb950" stroke-width="2"/>
+      <text x="300" y="4" text-anchor="middle" fill="#3fb950" font-family="Inter, sans-serif" font-size="11" font-weight="700">✓</text>
+      <text x="300" y="30" text-anchor="middle" fill="#8b949e" font-family="Inter, sans-serif" font-size="9">Chart</text>
+      <text x="300" y="40" text-anchor="middle" fill="#8b949e" font-family="Inter, sans-serif" font-size="9">Pattern</text>
+
+      <!-- Rule 5 - Pass -->
+      <circle cx="400" cy="0" r="14" fill="rgba(63,185,80,0.2)" stroke="#3fb950" stroke-width="2"/>
+      <text x="400" y="4" text-anchor="middle" fill="#3fb950" font-family="Inter, sans-serif" font-size="11" font-weight="700">✓</text>
+      <text x="400" y="30" text-anchor="middle" fill="#8b949e" font-family="Inter, sans-serif" font-size="9">Volume</text>
+      <text x="400" y="40" text-anchor="middle" fill="#8b949e" font-family="Inter, sans-serif" font-size="9">Confirm</text>
+
+      <!-- Rule 6 - Pass -->
+      <circle cx="500" cy="0" r="14" fill="rgba(63,185,80,0.2)" stroke="#3fb950" stroke-width="2"/>
+      <text x="500" y="4" text-anchor="middle" fill="#3fb950" font-family="Inter, sans-serif" font-size="11" font-weight="700">✓</text>
+      <text x="500" y="30" text-anchor="middle" fill="#8b949e" font-family="Inter, sans-serif" font-size="9">MA</text>
+      <text x="500" y="40" text-anchor="middle" fill="#8b949e" font-family="Inter, sans-serif" font-size="9">Aligned</text>
+
+      <!-- Rule 7 - FAIL -->
+      <circle cx="600" cy="0" r="14" fill="rgba(248,81,73,0.2)" stroke="#f85149" stroke-width="2"/>
+      <text x="600" y="4" text-anchor="middle" fill="#f85149" font-family="Inter, sans-serif" font-size="11" font-weight="700">✗</text>
+      <text x="600" y="30" text-anchor="middle" fill="#8b949e" font-family="Inter, sans-serif" font-size="9">Unusual</text>
+      <text x="600" y="40" text-anchor="middle" fill="#8b949e" font-family="Inter, sans-serif" font-size="9">Activity</text>
+    </g>
+
+    <!-- Score bar -->
+    <rect x="50" y="120" width="600" height="12" rx="6" fill="#161b22"/>
+    <rect x="50" y="120" width="450" height="12" rx="6" fill="url(#scoreGrad)"/>
+    <text x="510" y="130" fill="#e6edf3" font-family="Inter, sans-serif" font-size="12" font-weight="700">75%</text>
+
+    <!-- Verdict -->
+    <text x="50" y="165" fill="#8b949e" font-family="Inter, sans-serif" font-size="11">Pattern: <tspan fill="#e6edf3" font-weight="600">Distribution Top</tspan></text>
+    <text x="300" y="165" fill="#8b949e" font-family="Inter, sans-serif" font-size="11">Trend: <tspan fill="#f85149" font-weight="600">Weak — growth stock rotation</tspan></text>
+    <text x="50" y="185" fill="#8b949e" font-family="Inter, sans-serif" font-size="11">IVR: <tspan fill="#39d2c0" font-weight="600">18.9 (Low = cheap options)</tspan></text>
+    <text x="300" y="185" fill="#8b949e" font-family="Inter, sans-serif" font-size="11">Liquidity: <tspan fill="#3fb950" font-weight="600">★★★★ Excellent</tspan></text>
+
+    <defs>
+      <linearGradient id="scoreGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+        <stop offset="0%" style="stop-color:#58a6ff"/>
+        <stop offset="100%" style="stop-color:#39d2c0"/>
+      </linearGradient>
+    </defs>
+  </svg>
+</div>
+
+<p>6 out of 7 rules = a <strong>2% position</strong> in our framework. The only thing missing was unusual options activity (no big institutional sweeps). Everything else lined up — the chart pattern, the moving averages, the IV rank, all bearish.</p>
+
+<h2>How Do I Actually Track This Trade?</h2>
+
+<p>This was the biggest question I had. I bought the put for $6.35 per share (that's $635 total for 1 contract = 100 shares). But how do I know if I'm winning or losing?</p>
+
+<h3>The Simple Version</h3>
+
+<p>Your put option has a <strong>current price</strong> that changes every second the market is open. If that price goes UP from what you paid, you're winning. If it goes DOWN, you're losing. That's it.</p>
+
+<div style="margin: 32px 0; overflow-x: auto;">
+  <svg viewBox="0 0 700 280" xmlns="http://www.w3.org/2000/svg" style="width: 100%; max-width: 700px; display: block; margin: 0 auto;">
+    <rect width="700" height="280" rx="12" fill="#1c2333"/>
+    <text x="350" y="30" text-anchor="middle" fill="#8b949e" font-family="Inter, sans-serif" font-size="13" font-weight="600" letter-spacing="1">HOW YOUR PUT OPTION PRICE MOVES</text>
+
+    <!-- Entry line -->
+    <line x1="80" y1="140" x2="620" y2="140" stroke="#484f58" stroke-width="1" stroke-dasharray="6,4"/>
+    <text x="630" y="144" fill="#8b949e" font-family="Inter, sans-serif" font-size="11">$6.35</text>
+    <text x="50" y="144" fill="#8b949e" font-family="Inter, sans-serif" font-size="10">Entry</text>
+
+    <!-- Winning zone -->
+    <rect x="80" y="50" width="540" height="88" fill="rgba(63,185,80,0.06)" rx="4"/>
+    <text x="100" y="72" fill="#3fb950" font-family="Inter, sans-serif" font-size="12" font-weight="600">WINNING — Put price goes UP</text>
+    <text x="100" y="92" fill="#8b949e" font-family="Inter, sans-serif" font-size="11">If PLTR stock drops → your put becomes more valuable</text>
+    <text x="100" y="112" fill="#8b949e" font-family="Inter, sans-serif" font-size="11">Example: Put rises to $9.00 → you're up $265 (+42%)</text>
+
+    <!-- Losing zone -->
+    <rect x="80" y="142" width="540" height="88" fill="rgba(248,81,73,0.06)" rx="4"/>
+    <text x="100" y="165" fill="#f85149" font-family="Inter, sans-serif" font-size="12" font-weight="600">LOSING — Put price goes DOWN</text>
+    <text x="100" y="185" fill="#8b949e" font-family="Inter, sans-serif" font-size="11">If PLTR stock rises → your put loses value</text>
+    <text x="100" y="205" fill="#8b949e" font-family="Inter, sans-serif" font-size="11">Example: Put drops to $4.00 → you're down $235 (-37%)</text>
+
+    <!-- Stop loss line -->
+    <line x1="80" y1="238" x2="620" y2="238" stroke="#f85149" stroke-width="2" stroke-dasharray="4,3"/>
+    <text x="630" y="242" fill="#f85149" font-family="Inter, sans-serif" font-size="11">$3.18</text>
+    <text x="50" y="242" fill="#f85149" font-family="Inter, sans-serif" font-size="10">STOP</text>
+    <text x="350" y="260" text-anchor="middle" fill="#f85149" font-family="Inter, sans-serif" font-size="11">50% stop loss = sell if put drops to $3.18 (max loss: $317)</text>
+  </svg>
+</div>
+
+<h3>Wait — Why Does My Put Go Up When the Stock Goes Down?</h3>
+
+<p>This confuses everyone at first. Here's why:</p>
+
+<p>You bought the <em>right to sell PLTR at $120</em>. If PLTR crashes to $100, your right to sell at $120 is worth at least $20 per share ($2,000 for 100 shares). You paid $635 for that right. That's a huge profit.</p>
+
+<p>But if PLTR goes UP to $160, who cares about selling at $120? Nobody. Your put becomes worthless. You lose your $635.</p>
+
+<div class="callout info">
+  <div class="callout-title">The Simple Rule</div>
+  <p><strong>Stock goes DOWN = your PUT goes UP in value = you're winning.</strong><br/>
+  <strong>Stock goes UP = your PUT goes DOWN in value = you're losing.</strong></p>
+</div>
+
+<h2>How to Calculate Your P/L Percentage</h2>
+
+<p>This is the part I really needed to understand. Here's the formula:</p>
+
+<div style="margin: 24px 0; overflow-x: auto;">
+  <svg viewBox="0 0 700 160" xmlns="http://www.w3.org/2000/svg" style="width: 100%; max-width: 700px; display: block; margin: 0 auto;">
+    <rect width="700" height="160" rx="12" fill="#1c2333"/>
+
+    <!-- Formula -->
+    <text x="350" y="35" text-anchor="middle" fill="#e6edf3" font-family="Inter, sans-serif" font-size="14" font-weight="700">P/L % = (Current Price − Entry Price) ÷ Entry Price × 100</text>
+
+    <!-- Example boxes -->
+    <rect x="30" y="55" width="200" height="90" rx="8" fill="rgba(63,185,80,0.08)" stroke="#3fb950" stroke-width="1"/>
+    <text x="130" y="78" text-anchor="middle" fill="#3fb950" font-family="Inter, sans-serif" font-size="12" font-weight="600">Winning Example</text>
+    <text x="130" y="100" text-anchor="middle" fill="#8b949e" font-family="Inter, sans-serif" font-size="11">Put price: $9.50</text>
+    <text x="130" y="118" text-anchor="middle" fill="#8b949e" font-family="Inter, sans-serif" font-size="11">(9.50 − 6.35) ÷ 6.35</text>
+    <text x="130" y="136" text-anchor="middle" fill="#3fb950" font-family="Inter, sans-serif" font-size="13" font-weight="700">= +49.6%  (+$315)</text>
+
+    <rect x="250" y="55" width="200" height="90" rx="8" fill="rgba(210,153,34,0.08)" stroke="#d29922" stroke-width="1"/>
+    <text x="350" y="78" text-anchor="middle" fill="#d29922" font-family="Inter, sans-serif" font-size="12" font-weight="600">Flat Example</text>
+    <text x="350" y="100" text-anchor="middle" fill="#8b949e" font-family="Inter, sans-serif" font-size="11">Put price: $6.35</text>
+    <text x="350" y="118" text-anchor="middle" fill="#8b949e" font-family="Inter, sans-serif" font-size="11">(6.35 − 6.35) ÷ 6.35</text>
+    <text x="350" y="136" text-anchor="middle" fill="#d29922" font-family="Inter, sans-serif" font-size="13" font-weight="700">= 0%  ($0)</text>
+
+    <rect x="470" y="55" width="200" height="90" rx="8" fill="rgba(248,81,73,0.08)" stroke="#f85149" stroke-width="1"/>
+    <text x="570" y="78" text-anchor="middle" fill="#f85149" font-family="Inter, sans-serif" font-size="12" font-weight="600">Losing Example</text>
+    <text x="570" y="100" text-anchor="middle" fill="#8b949e" font-family="Inter, sans-serif" font-size="11">Put price: $4.00</text>
+    <text x="570" y="118" text-anchor="middle" fill="#8b949e" font-family="Inter, sans-serif" font-size="11">(4.00 − 6.35) ÷ 6.35</text>
+    <text x="570" y="136" text-anchor="middle" fill="#f85149" font-family="Inter, sans-serif" font-size="13" font-weight="700">= -37%  (-$235)</text>
+  </svg>
+</div>
+
+<p>On Tastytrade, you don't need to calculate this yourself. The <strong>P/L Day</strong> column shows your daily profit/loss in dollars, and the <strong>P/L YTD</strong> column shows total. But now you know the math behind it.</p>
+
+<h2>What Moves My Put's Price?</h2>
+
+<p>Your put option's price doesn't just depend on whether PLTR goes up or down. There are three main forces at work:</p>
+
+<div style="margin: 24px 0; overflow-x: auto;">
+  <svg viewBox="0 0 700 220" xmlns="http://www.w3.org/2000/svg" style="width: 100%; max-width: 700px; display: block; margin: 0 auto;">
+    <rect width="700" height="220" rx="12" fill="#1c2333"/>
+    <text x="350" y="30" text-anchor="middle" fill="#8b949e" font-family="Inter, sans-serif" font-size="13" font-weight="600" letter-spacing="1">THREE FORCES THAT MOVE YOUR OPTION</text>
+
+    <!-- Force 1: Stock Price -->
+    <rect x="30" y="50" width="200" height="150" rx="8" fill="#161b22" stroke="#58a6ff" stroke-width="1"/>
+    <text x="130" y="78" text-anchor="middle" fill="#58a6ff" font-family="Inter, sans-serif" font-size="14" font-weight="700">Stock Price</text>
+    <text x="130" y="95" text-anchor="middle" fill="#8b949e" font-family="Inter, sans-serif" font-size="10">(Delta)</text>
+    <text x="130" y="118" text-anchor="middle" fill="#8b949e" font-family="Inter, sans-serif" font-size="11">PLTR drops $1 →</text>
+    <text x="130" y="136" text-anchor="middle" fill="#3fb950" font-family="Inter, sans-serif" font-size="12" font-weight="600">Put gains ~$0.15-0.20</text>
+    <line x1="50" y1="150" x2="210" y2="150" stroke="#30363d" stroke-width="1"/>
+    <text x="130" y="170" text-anchor="middle" fill="#8b949e" font-family="Inter, sans-serif" font-size="10">This is the BIGGEST</text>
+    <text x="130" y="183" text-anchor="middle" fill="#8b949e" font-family="Inter, sans-serif" font-size="10">factor for your trade</text>
+
+    <!-- Force 2: Time -->
+    <rect x="250" y="50" width="200" height="150" rx="8" fill="#161b22" stroke="#d29922" stroke-width="1"/>
+    <text x="350" y="78" text-anchor="middle" fill="#d29922" font-family="Inter, sans-serif" font-size="14" font-weight="700">Time Passing</text>
+    <text x="350" y="95" text-anchor="middle" fill="#8b949e" font-family="Inter, sans-serif" font-size="10">(Theta)</text>
+    <text x="350" y="118" text-anchor="middle" fill="#8b949e" font-family="Inter, sans-serif" font-size="11">Every day that passes →</text>
+    <text x="350" y="136" text-anchor="middle" fill="#f85149" font-family="Inter, sans-serif" font-size="12" font-weight="600">Put loses a little value</text>
+    <line x1="270" y1="150" x2="430" y2="150" stroke="#30363d" stroke-width="1"/>
+    <text x="350" y="170" text-anchor="middle" fill="#8b949e" font-family="Inter, sans-serif" font-size="10">120 days = slow decay</text>
+    <text x="350" y="183" text-anchor="middle" fill="#8b949e" font-family="Inter, sans-serif" font-size="10">Speeds up near expiry</text>
+
+    <!-- Force 3: Volatility -->
+    <rect x="470" y="50" width="200" height="150" rx="8" fill="#161b22" stroke="#bc8cff" stroke-width="1"/>
+    <text x="570" y="78" text-anchor="middle" fill="#bc8cff" font-family="Inter, sans-serif" font-size="14" font-weight="700">Volatility</text>
+    <text x="570" y="95" text-anchor="middle" fill="#8b949e" font-family="Inter, sans-serif" font-size="10">(Vega)</text>
+    <text x="570" y="118" text-anchor="middle" fill="#8b949e" font-family="Inter, sans-serif" font-size="11">If fear increases →</text>
+    <text x="570" y="136" text-anchor="middle" fill="#3fb950" font-family="Inter, sans-serif" font-size="12" font-weight="600">Put gains value</text>
+    <line x1="490" y1="150" x2="650" y2="150" stroke="#30363d" stroke-width="1"/>
+    <text x="570" y="170" text-anchor="middle" fill="#8b949e" font-family="Inter, sans-serif" font-size="10">IVR at 18.9 = cheap</text>
+    <text x="570" y="183" text-anchor="middle" fill="#8b949e" font-family="Inter, sans-serif" font-size="10">If IVR rises, we win more</text>
+  </svg>
+</div>
+
+<p>The key insight: <strong>time is always working against you</strong> when you buy options. That's why 120 days matters — it gives PLTR enough time to make its move before theta eats away too much of your premium.</p>
+
+<h2>My Trade Plan</h2>
+
+<table class="data-table">
+  <thead>
+    <tr>
+      <th>Item</th>
+      <th>Detail</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td class="ticker">Entry</td>
+      <td>$6.35 per share ($635 total for 1 contract)</td>
+    </tr>
+    <tr>
+      <td class="ticker">Stop Loss (50%)</td>
+      <td>Sell if put drops to $3.18 → max loss = $317</td>
+    </tr>
+    <tr>
+      <td class="ticker">Profit Target</td>
+      <td>Sell if put doubles to $12.70 → profit = $635 (100%)</td>
+    </tr>
+    <tr>
+      <td class="ticker">Break-Even at Expiry</td>
+      <td>PLTR needs to be at $113.65 ($120 strike − $6.35 premium)</td>
+    </tr>
+    <tr>
+      <td class="ticker">Earnings Catalyst</td>
+      <td>May 4, 2026 — before expiry, could swing hard either way</td>
+    </tr>
+    <tr>
+      <td class="ticker">Go Maz Score</td>
+      <td>75% — 6/7 rules passing (2% position size tier)</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2>What I'm Watching</h2>
+
+<p>For the next 113 days, I'm tracking a few things daily:</p>
+
+<ul>
+  <li><strong>PLTR stock price</strong> — needs to drop toward $120 for this to work</li>
+  <li><strong>My put's current price</strong> — this is my actual P/L, shown in Tastytrade</li>
+  <li><strong>IV Rank</strong> — started at 18.9, if it rises my put gets a volatility boost</li>
+  <li><strong>Days to expiry</strong> — theta decay accelerates as we get closer to July 17</li>
+  <li><strong>May 4 earnings</strong> — this is the big swing event for this trade</li>
+</ul>
+
+<h2>Day 1 Status</h2>
+
+<div class="stats-row">
+  <div class="stat-card">
+    <div class="stat-value" style="-webkit-text-fill-color: #f85149;">-$37</div>
+    <div class="stat-label">P/L Day 1</div>
+  </div>
+  <div class="stat-card">
+    <div class="stat-value" style="-webkit-text-fill-color: #f85149;">-5.8%</div>
+    <div class="stat-label">Return</div>
+  </div>
+  <div class="stat-card">
+    <div class="stat-value">$35.88</div>
+    <div class="stat-label">Account Net Liq</div>
+  </div>
+  <div class="stat-card">
+    <div class="stat-value">113d</div>
+    <div class="stat-label">Days Remaining</div>
+  </div>
+</div>
+
+<p>Down $37 on day one. Not great, but with 113 days left, this trade has a lot of time to develop. The stock bounced a little after I bought, which is normal. The question is whether the broader downtrend continues — and Go Maz says the trend is weak with growth stock rotation out of tech names like PLTR.</p>
+
+<p>I'll keep logging updates as this trade develops. Win or lose, the point is to learn.</p>
+
+<div class="callout warning">
+  <div class="callout-title">Disclaimer</div>
+  <p>I am not a financial advisor. I'm a complete beginner documenting my learning journey. Nothing on this site is financial advice. Don't follow my trades.</p>
+</div>
+
+</BlogPost>
