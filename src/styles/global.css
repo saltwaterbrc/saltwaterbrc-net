@@ -129,6 +129,56 @@ img {
   color: var(--text-primary);
 }
 
+/* ── HAMBURGER MENU ── */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  z-index: 110;
+}
+
+.hamburger {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: var(--text-secondary);
+  position: relative;
+  transition: background 0.3s;
+}
+
+.hamburger::before,
+.hamburger::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  width: 24px;
+  height: 2px;
+  background: var(--text-secondary);
+  transition: transform 0.3s, top 0.3s;
+}
+
+.hamburger::before { top: -7px; }
+.hamburger::after { top: 7px; }
+
+/* Animate to X when open */
+.menu-toggle[aria-expanded="true"] .hamburger {
+  background: transparent;
+}
+
+.menu-toggle[aria-expanded="true"] .hamburger::before {
+  top: 0;
+  transform: rotate(45deg);
+  background: var(--text-primary);
+}
+
+.menu-toggle[aria-expanded="true"] .hamburger::after {
+  top: 0;
+  transform: rotate(-45deg);
+  background: var(--text-primary);
+}
+
 /* ── HERO SECTION ── */
 .hero {
   background: var(--gradient-hero);
@@ -498,8 +548,43 @@ img {
 @media (max-width: 768px) {
   .hero h1 { font-size: 2rem; }
   .posts-grid { grid-template-columns: 1fr; }
-  .nav-links { gap: 16px; }
-  .nav-links a { font-size: 0.8rem; }
   .post-header h1 { font-size: 1.8rem; }
   .stats-row { grid-template-columns: repeat(2, 1fr); }
+
+  /* Show hamburger, hide inline nav */
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: var(--header-height);
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    background: rgba(13, 17, 23, 0.97);
+    backdrop-filter: blur(16px);
+    border-bottom: 1px solid var(--border-primary);
+    padding: 16px 24px;
+    gap: 0;
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .nav-links li {
+    border-bottom: 1px solid var(--border-primary);
+  }
+
+  .nav-links li:last-child {
+    border-bottom: none;
+  }
+
+  .nav-links a {
+    display: block;
+    padding: 14px 0;
+    font-size: 1rem;
+  }
 }
