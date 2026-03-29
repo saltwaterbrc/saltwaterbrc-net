@@ -1,0 +1,418 @@
+---
+import BlogPost from '../../layouts/BlogPost.astro';
+---
+<BlogPost title="Bullish & Bearish Signals — Reading Moving Averages" date="March 29, 2026" tag="education" description="How to read the 20, 50, and 200-day moving averages on a chart. Stacking order, golden cross, death cross, and what they mean for your trades.">
+
+<p>Once you add the 20, 50, and 200-day moving averages to your chart, you're looking at a real-time voting system. When all three agree on direction, the trend has conviction. When they start crossing and tangling, the stock is confused — and you should be cautious.</p>
+
+<p>Here's exactly what to look for.</p>
+
+<div class="callout info">
+  <div class="callout-title">What Each MA Tells You</div>
+  <p><strong>20-day</strong> = what the stock is doing right now (short-term mood). <strong>50-day</strong> = what it's been doing the past couple months (medium trend). <strong>200-day</strong> = the big picture — where institutions decide if a stock is healthy or not.</p>
+</div>
+
+<!-- ═══════════════════════════════════════ -->
+<h2>Bullish Signals</h2>
+<!-- ═══════════════════════════════════════ -->
+
+<h3>1. Bullish Stacking Order</h3>
+
+<p>The #1 thing to look for. When the 20-day is on top, 50-day in the middle, and 200-day on the bottom — all sloping upward — the stock is in a strong uptrend. Think of it like a parade: the 20 is leading and everyone's following in formation.</p>
+
+<svg viewBox="0 0 700 320" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:700px;margin:24px auto;display:block;background:#0d1117;border-radius:12px;border:1px solid #30363d;">
+  <!-- Grid lines -->
+  <line x1="60" y1="40" x2="60" y2="270" stroke="#1e2733" stroke-width="1"/>
+  <line x1="60" y1="270" x2="670" y2="270" stroke="#1e2733" stroke-width="1"/>
+  <line x1="60" y1="100" x2="670" y2="100" stroke="#1e2733" stroke-width="0.5" stroke-dasharray="4,4" opacity="0.3"/>
+  <line x1="60" y1="155" x2="670" y2="155" stroke="#1e2733" stroke-width="0.5" stroke-dasharray="4,4" opacity="0.3"/>
+  <line x1="60" y1="210" x2="670" y2="210" stroke="#1e2733" stroke-width="0.5" stroke-dasharray="4,4" opacity="0.3"/>
+
+  <!-- Price action (gray candle bodies) -->
+  <g opacity="0.2">
+    <rect x="80" y="140" width="6" height="20" fill="#8b949e" rx="1"/>
+    <rect x="105" y="130" width="6" height="25" fill="#8b949e" rx="1"/>
+    <rect x="130" y="135" width="6" height="18" fill="#8b949e" rx="1"/>
+    <rect x="155" y="120" width="6" height="22" fill="#8b949e" rx="1"/>
+    <rect x="180" y="115" width="6" height="15" fill="#8b949e" rx="1"/>
+    <rect x="205" y="105" width="6" height="20" fill="#8b949e" rx="1"/>
+    <rect x="230" y="100" width="6" height="18" fill="#8b949e" rx="1"/>
+    <rect x="255" y="90" width="6" height="22" fill="#8b949e" rx="1"/>
+    <rect x="280" y="85" width="6" height="15" fill="#8b949e" rx="1"/>
+    <rect x="305" y="78" width="6" height="20" fill="#8b949e" rx="1"/>
+    <rect x="330" y="72" width="6" height="16" fill="#8b949e" rx="1"/>
+    <rect x="355" y="65" width="6" height="22" fill="#8b949e" rx="1"/>
+    <rect x="380" y="60" width="6" height="14" fill="#8b949e" rx="1"/>
+    <rect x="405" y="55" width="6" height="18" fill="#8b949e" rx="1"/>
+    <rect x="430" y="50" width="6" height="16" fill="#8b949e" rx="1"/>
+    <rect x="455" y="45" width="6" height="20" fill="#8b949e" rx="1"/>
+    <rect x="480" y="40" width="6" height="14" fill="#8b949e" rx="1"/>
+  </g>
+
+  <!-- 200-day MA (red) — bottom, gentle slope -->
+  <path d="M80,230 Q200,215 300,200 Q400,185 500,170 Q580,160 650,150" stroke="#f85149" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+
+  <!-- 50-day MA (blue) — middle -->
+  <path d="M80,200 Q200,180 300,158 Q400,138 500,118 Q580,104 650,92" stroke="#58a6ff" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+
+  <!-- 20-day MA (green) — top, steepest slope -->
+  <path d="M80,175 Q200,148 300,118 Q400,90 500,68 Q580,52 650,42" stroke="#3fb950" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+
+  <!-- Labels -->
+  <text x="655" y="40" fill="#3fb950" font-size="12" font-family="Inter,sans-serif" font-weight="600">20 MA</text>
+  <text x="655" y="90" fill="#58a6ff" font-size="12" font-family="Inter,sans-serif" font-weight="600">50 MA</text>
+  <text x="655" y="148" fill="#f85149" font-size="12" font-family="Inter,sans-serif" font-weight="600">200 MA</text>
+
+  <!-- Annotation -->
+  <rect x="180" y="240" width="280" height="26" rx="6" fill="rgba(63,185,80,0.12)"/>
+  <text x="320" y="258" fill="#3fb950" font-size="13" font-family="Inter,sans-serif" font-weight="600" text-anchor="middle">BULLISH STACKING — All 3 sloping up</text>
+
+  <!-- Arrow showing spread -->
+  <line x1="520" y1="65" x2="520" y2="168" stroke="#484f58" stroke-width="1" stroke-dasharray="3,3"/>
+  <text x="535" y="120" fill="#8b949e" font-size="10" font-family="Inter,sans-serif">spread</text>
+</svg>
+
+<p>When you see this on your chart, the stock has strong momentum. The wider the spread between the MAs, the stronger the trend. This is the ideal setup for <strong>CALLS</strong>.</p>
+
+<!-- ═══════════════════════════════════════ -->
+<h3>2. Golden Cross</h3>
+
+<p>When the 50-day crosses <em>above</em> the 200-day, that's a <strong>Golden Cross</strong>. This is a big deal — institutional algorithms watch for this and it often triggers buying. It's a longer-term signal that says "the medium trend just turned bullish against the big picture."</p>
+
+<svg viewBox="0 0 700 320" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:700px;margin:24px auto;display:block;background:#0d1117;border-radius:12px;border:1px solid #30363d;">
+  <!-- Grid -->
+  <line x1="60" y1="40" x2="60" y2="270" stroke="#1e2733" stroke-width="1"/>
+  <line x1="60" y1="270" x2="670" y2="270" stroke="#1e2733" stroke-width="1"/>
+  <line x1="60" y1="155" x2="670" y2="155" stroke="#1e2733" stroke-width="0.5" stroke-dasharray="4,4" opacity="0.3"/>
+
+  <!-- 200-day MA (red) — relatively flat -->
+  <path d="M80,140 Q180,148 280,155 Q380,160 480,158 Q580,155 650,150" stroke="#f85149" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+
+  <!-- 50-day MA (blue) — comes from below, crosses above -->
+  <path d="M80,210 Q160,195 240,175 Q300,158 340,148 Q400,128 480,110 Q560,95 650,82" stroke="#58a6ff" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+
+  <!-- 20-day MA (green) — already above, leading -->
+  <path d="M80,190 Q140,168 200,140 Q260,115 320,95 Q400,70 480,55 Q560,45 650,38" stroke="#3fb950" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+
+  <!-- Cross point highlight -->
+  <circle cx="305" cy="152" r="18" fill="none" stroke="#f59e0b" stroke-width="2" stroke-dasharray="4,3"/>
+  <circle cx="305" cy="152" r="4" fill="#f59e0b"/>
+
+  <!-- Annotation arrow -->
+  <line x1="305" y1="172" x2="305" y2="210" stroke="#f59e0b" stroke-width="1.5"/>
+  <polygon points="305,215 300,208 310,208" fill="#f59e0b"/>
+  <rect x="215" y="218" width="180" height="26" rx="6" fill="rgba(245,158,11,0.12)"/>
+  <text x="305" y="236" fill="#f59e0b" font-size="13" font-family="Inter,sans-serif" font-weight="700" text-anchor="middle">GOLDEN CROSS</text>
+
+  <!-- Before/After labels -->
+  <rect x="100" y="242" width="120" height="22" rx="5" fill="rgba(248,81,73,0.1)"/>
+  <text x="160" y="258" fill="#f85149" font-size="11" font-family="Inter,sans-serif" font-weight="500" text-anchor="middle">50 below 200</text>
+  <rect x="440" y="242" width="120" height="22" rx="5" fill="rgba(63,185,80,0.1)"/>
+  <text x="500" y="258" fill="#3fb950" font-size="11" font-family="Inter,sans-serif" font-weight="500" text-anchor="middle">50 above 200</text>
+
+  <!-- Labels -->
+  <text x="655" y="36" fill="#3fb950" font-size="12" font-family="Inter,sans-serif" font-weight="600">20 MA</text>
+  <text x="655" y="80" fill="#58a6ff" font-size="12" font-family="Inter,sans-serif" font-weight="600">50 MA</text>
+  <text x="655" y="148" fill="#f85149" font-size="12" font-family="Inter,sans-serif" font-weight="600">200 MA</text>
+</svg>
+
+<p>Notice how the 20-day (green) was already above both — it's the early warning. The Golden Cross just <em>confirms</em> what the 20 already told you. By the time you see this, the move has started, but institutions use it as a buy trigger so it often accelerates from here.</p>
+
+<!-- ═══════════════════════════════════════ -->
+<h3>3. Price Bouncing Off a Moving Average</h3>
+
+<p>When price drops to the 50 or 200-day MA and bounces back up, that MA is acting like a <strong>support level</strong>. Institutions often buy at the 200-day because they see it as "fair value." If price touches it and bounces, that's a strong floor.</p>
+
+<svg viewBox="0 0 700 320" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:700px;margin:24px auto;display:block;background:#0d1117;border-radius:12px;border:1px solid #30363d;">
+  <!-- Grid -->
+  <line x1="60" y1="40" x2="60" y2="270" stroke="#1e2733" stroke-width="1"/>
+  <line x1="60" y1="270" x2="670" y2="270" stroke="#1e2733" stroke-width="1"/>
+
+  <!-- 200-day MA (red) — gently sloping up -->
+  <path d="M60,200 Q200,188 350,178 Q500,168 650,160" stroke="#f85149" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+
+  <!-- 50-day MA (blue) -->
+  <path d="M60,160 Q200,148 350,138 Q500,128 650,118" stroke="#58a6ff" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+
+  <!-- Price action — dips down to 200 MA and bounces 3 times -->
+  <path d="M80,110 Q110,105 140,115 Q170,128 200,140 Q230,160 255,175 Q275,190 290,192 Q305,190 320,175 Q340,155 370,130 Q400,110 430,100 Q450,95 470,105 Q490,120 510,140 Q530,158 545,170 Q555,175 560,172 Q575,160 590,140 Q610,115 640,95" stroke="#e6edf3" stroke-width="1.8" fill="none" stroke-linecap="round" opacity="0.7"/>
+
+  <!-- Bounce points on 200 MA -->
+  <circle cx="290" cy="192" r="10" fill="none" stroke="#3fb950" stroke-width="2"/>
+  <text x="290" y="218" fill="#3fb950" font-size="11" font-family="Inter,sans-serif" font-weight="600" text-anchor="middle">BOUNCE</text>
+
+  <circle cx="558" cy="172" r="10" fill="none" stroke="#3fb950" stroke-width="2"/>
+  <text x="558" y="198" fill="#3fb950" font-size="11" font-family="Inter,sans-serif" font-weight="600" text-anchor="middle">BOUNCE</text>
+
+  <!-- Arrows showing bounce direction -->
+  <path d="M290,182 L290,165" stroke="#3fb950" stroke-width="2" stroke-linecap="round"/>
+  <polygon points="290,160 285,168 295,168" fill="#3fb950"/>
+  <path d="M558,162 L558,145" stroke="#3fb950" stroke-width="2" stroke-linecap="round"/>
+  <polygon points="558,140 553,148 563,148" fill="#3fb950"/>
+
+  <!-- Labels -->
+  <text x="655" y="116" fill="#58a6ff" font-size="12" font-family="Inter,sans-serif" font-weight="600">50 MA</text>
+  <text x="655" y="158" fill="#f85149" font-size="12" font-family="Inter,sans-serif" font-weight="600">200 MA</text>
+  <text x="655" y="93" fill="#e6edf3" font-size="12" font-family="Inter,sans-serif" font-weight="500" opacity="0.7">Price</text>
+
+  <rect x="180" y="245" width="340" height="22" rx="5" fill="rgba(63,185,80,0.1)"/>
+  <text x="350" y="261" fill="#3fb950" font-size="12" font-family="Inter,sans-serif" font-weight="600" text-anchor="middle">200 MA acting as SUPPORT — institutions buying here</text>
+</svg>
+
+<p>Each time the price touches the 200-day and bounces, it confirms that level as strong support. The more bounces, the more reliable the floor. If it eventually <em>breaks through</em> — that's a different story (see bearish signals below).</p>
+
+<!-- ═══════════════════════════════════════ -->
+<h2>Bearish Signals</h2>
+<!-- ═══════════════════════════════════════ -->
+
+<h3>4. Bearish Stacking Order</h3>
+
+<p>The exact opposite of bullish stacking. When the 200 is on top, 50 in the middle, and 20 on the bottom — all sloping downward — the stock is in a confirmed downtrend. This is the setup for <strong>PUTS</strong>.</p>
+
+<svg viewBox="0 0 700 320" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:700px;margin:24px auto;display:block;background:#0d1117;border-radius:12px;border:1px solid #30363d;">
+  <!-- Grid -->
+  <line x1="60" y1="40" x2="60" y2="270" stroke="#1e2733" stroke-width="1"/>
+  <line x1="60" y1="270" x2="670" y2="270" stroke="#1e2733" stroke-width="1"/>
+  <line x1="60" y1="100" x2="670" y2="100" stroke="#1e2733" stroke-width="0.5" stroke-dasharray="4,4" opacity="0.3"/>
+  <line x1="60" y1="155" x2="670" y2="155" stroke="#1e2733" stroke-width="0.5" stroke-dasharray="4,4" opacity="0.3"/>
+  <line x1="60" y1="210" x2="670" y2="210" stroke="#1e2733" stroke-width="0.5" stroke-dasharray="4,4" opacity="0.3"/>
+
+  <!-- 200-day MA (red) — top, gentle decline -->
+  <path d="M80,80 Q200,90 300,102 Q400,115 500,130 Q580,140 650,150" stroke="#f85149" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+
+  <!-- 50-day MA (blue) — middle -->
+  <path d="M80,110 Q200,128 300,150 Q400,172 500,195 Q580,210 650,220" stroke="#58a6ff" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+
+  <!-- 20-day MA (green) — bottom, steepest decline -->
+  <path d="M80,135 Q200,162 300,192 Q400,218 500,238 Q580,250 650,258" stroke="#3fb950" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+
+  <!-- Price candles (faint) -->
+  <g opacity="0.2">
+    <rect x="100" y="125" width="6" height="18" fill="#8b949e" rx="1"/>
+    <rect x="135" y="148" width="6" height="20" fill="#8b949e" rx="1"/>
+    <rect x="170" y="155" width="6" height="22" fill="#8b949e" rx="1"/>
+    <rect x="205" y="168" width="6" height="18" fill="#8b949e" rx="1"/>
+    <rect x="240" y="178" width="6" height="22" fill="#8b949e" rx="1"/>
+    <rect x="275" y="190" width="6" height="16" fill="#8b949e" rx="1"/>
+    <rect x="310" y="200" width="6" height="24" fill="#8b949e" rx="1"/>
+    <rect x="345" y="210" width="6" height="18" fill="#8b949e" rx="1"/>
+    <rect x="380" y="222" width="6" height="20" fill="#8b949e" rx="1"/>
+    <rect x="415" y="230" width="6" height="18" fill="#8b949e" rx="1"/>
+    <rect x="450" y="238" width="6" height="22" fill="#8b949e" rx="1"/>
+    <rect x="485" y="245" width="6" height="16" fill="#8b949e" rx="1"/>
+  </g>
+
+  <!-- Labels -->
+  <text x="655" y="148" fill="#f85149" font-size="12" font-family="Inter,sans-serif" font-weight="600">200 MA</text>
+  <text x="655" y="218" fill="#58a6ff" font-size="12" font-family="Inter,sans-serif" font-weight="600">50 MA</text>
+  <text x="655" y="256" fill="#3fb950" font-size="12" font-family="Inter,sans-serif" font-weight="600">20 MA</text>
+
+  <!-- Annotation -->
+  <rect x="185" y="52" width="310" height="26" rx="6" fill="rgba(248,81,73,0.12)"/>
+  <text x="340" y="70" fill="#f85149" font-size="13" font-family="Inter,sans-serif" font-weight="600" text-anchor="middle">BEARISH STACKING — All 3 sloping down</text>
+
+  <!-- Arrow showing spread -->
+  <line x1="530" y1="133" x2="530" y2="242" stroke="#484f58" stroke-width="1" stroke-dasharray="3,3"/>
+  <text x="545" y="190" fill="#8b949e" font-size="10" font-family="Inter,sans-serif">spread</text>
+</svg>
+
+<p>This is exactly what Ed was looking at on PLTR when he identified the PUT setup. The 20-day had already dropped below the 50-day — a sign that short-term sellers were in control. When all three MAs stack bearish, the trend has full conviction downward.</p>
+
+<!-- ═══════════════════════════════════════ -->
+<h3>5. Death Cross</h3>
+
+<p>The opposite of a Golden Cross. When the 50-day crosses <em>below</em> the 200-day, that's a <strong>Death Cross</strong>. Institutions watch for this as a sell signal. It means the medium-term trend has turned negative against the long-term backdrop.</p>
+
+<svg viewBox="0 0 700 320" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:700px;margin:24px auto;display:block;background:#0d1117;border-radius:12px;border:1px solid #30363d;">
+  <!-- Grid -->
+  <line x1="60" y1="40" x2="60" y2="270" stroke="#1e2733" stroke-width="1"/>
+  <line x1="60" y1="270" x2="670" y2="270" stroke="#1e2733" stroke-width="1"/>
+  <line x1="60" y1="155" x2="670" y2="155" stroke="#1e2733" stroke-width="0.5" stroke-dasharray="4,4" opacity="0.3"/>
+
+  <!-- 200-day MA (red) — relatively flat -->
+  <path d="M80,155 Q180,152 280,150 Q380,150 480,152 Q580,155 650,158" stroke="#f85149" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+
+  <!-- 50-day MA (blue) — comes from above, crosses below -->
+  <path d="M80,100 Q160,112 240,128 Q300,142 340,155 Q400,175 480,195 Q560,210 650,222" stroke="#58a6ff" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+
+  <!-- 20-day MA (green) — already below, leading the drop -->
+  <path d="M80,115 Q140,135 200,160 Q260,185 320,208 Q400,232 480,248 Q560,258 650,262" stroke="#3fb950" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+
+  <!-- Cross point highlight -->
+  <circle cx="330" cy="153" r="18" fill="none" stroke="#f85149" stroke-width="2" stroke-dasharray="4,3"/>
+  <circle cx="330" cy="153" r="4" fill="#f85149"/>
+
+  <!-- Annotation -->
+  <line x1="330" y1="133" x2="330" y2="90" stroke="#f85149" stroke-width="1.5"/>
+  <polygon points="330,85 325,92 335,92" fill="#f85149"/>
+  <rect x="250" y="58" width="160" height="26" rx="6" fill="rgba(248,81,73,0.12)"/>
+  <text x="330" y="76" fill="#f85149" font-size="13" font-family="Inter,sans-serif" font-weight="700" text-anchor="middle">DEATH CROSS</text>
+
+  <!-- Before/After labels -->
+  <rect x="100" y="245" width="120" height="22" rx="5" fill="rgba(63,185,80,0.1)"/>
+  <text x="160" y="261" fill="#3fb950" font-size="11" font-family="Inter,sans-serif" font-weight="500" text-anchor="middle">50 above 200</text>
+  <rect x="460" y="245" width="120" height="22" rx="5" fill="rgba(248,81,73,0.1)"/>
+  <text x="520" y="261" fill="#f85149" font-size="11" font-family="Inter,sans-serif" font-weight="500" text-anchor="middle">50 below 200</text>
+
+  <!-- Labels -->
+  <text x="655" y="156" fill="#f85149" font-size="12" font-family="Inter,sans-serif" font-weight="600">200 MA</text>
+  <text x="655" y="220" fill="#58a6ff" font-size="12" font-family="Inter,sans-serif" font-weight="600">50 MA</text>
+  <text x="655" y="260" fill="#3fb950" font-size="12" font-family="Inter,sans-serif" font-weight="600">20 MA</text>
+</svg>
+
+<p>Notice how the 20-day (green) dropped below the 200 first — that was the early warning. Then the 50-day followed and confirmed with the Death Cross. By the time you see this, the bearish thesis is strong. This is where Ed's PUTS strategy comes in.</p>
+
+<!-- ═══════════════════════════════════════ -->
+<h3>6. Price Rejected at a Moving Average</h3>
+
+<p>When a stock is falling and tries to rally back up to the 50 or 200-day MA but gets <strong>rejected</strong>, that MA has become resistance. The floor is now the ceiling — same concept as support & resistance, but moving with time.</p>
+
+<svg viewBox="0 0 700 320" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:700px;margin:24px auto;display:block;background:#0d1117;border-radius:12px;border:1px solid #30363d;">
+  <!-- Grid -->
+  <line x1="60" y1="40" x2="60" y2="270" stroke="#1e2733" stroke-width="1"/>
+  <line x1="60" y1="270" x2="670" y2="270" stroke="#1e2733" stroke-width="1"/>
+
+  <!-- 50-day MA (blue) — acting as resistance -->
+  <path d="M60,110 Q200,118 350,128 Q500,138 650,148" stroke="#58a6ff" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+
+  <!-- 200-day MA (red) — above -->
+  <path d="M60,75 Q200,80 350,86 Q500,92 650,98" stroke="#f85149" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+
+  <!-- Price action — rallies up to 50 MA and gets rejected twice -->
+  <path d="M80,180 Q110,170 140,155 Q170,140 200,128 Q215,122 225,125 Q240,135 260,155 Q290,180 320,200 Q340,210 360,205 Q380,195 400,175 Q420,155 440,140 Q455,132 465,135 Q480,145 500,165 Q520,185 540,210 Q560,230 590,240 Q620,245 650,248" stroke="#e6edf3" stroke-width="1.8" fill="none" stroke-linecap="round" opacity="0.7"/>
+
+  <!-- Rejection points -->
+  <circle cx="208" cy="125" r="10" fill="none" stroke="#f85149" stroke-width="2"/>
+  <text x="208" y="108" fill="#f85149" font-size="11" font-family="Inter,sans-serif" font-weight="700" text-anchor="middle">REJECTED</text>
+
+  <circle cx="450" cy="134" r="10" fill="none" stroke="#f85149" stroke-width="2"/>
+  <text x="450" y="118" fill="#f85149" font-size="11" font-family="Inter,sans-serif" font-weight="700" text-anchor="middle">REJECTED</text>
+
+  <!-- Arrows showing rejection -->
+  <path d="M208,135 L208,152" stroke="#f85149" stroke-width="2" stroke-linecap="round"/>
+  <polygon points="208,157 203,149 213,149" fill="#f85149"/>
+  <path d="M450,144 L450,161" stroke="#f85149" stroke-width="2" stroke-linecap="round"/>
+  <polygon points="450,166 445,158 455,158" fill="#f85149"/>
+
+  <!-- Labels -->
+  <text x="655" y="96" fill="#f85149" font-size="12" font-family="Inter,sans-serif" font-weight="600">200 MA</text>
+  <text x="655" y="146" fill="#58a6ff" font-size="12" font-family="Inter,sans-serif" font-weight="600">50 MA</text>
+  <text x="655" y="246" fill="#e6edf3" font-size="12" font-family="Inter,sans-serif" font-weight="500" opacity="0.7">Price</text>
+
+  <rect x="180" y="252" width="340" height="22" rx="5" fill="rgba(248,81,73,0.1)"/>
+  <text x="350" y="268" fill="#f85149" font-size="12" font-family="Inter,sans-serif" font-weight="600" text-anchor="middle">50 MA flipped from SUPPORT to RESISTANCE</text>
+</svg>
+
+<p>Each rejection confirms the MA as a ceiling. Price tries to break through, fails, and falls harder. This is a strong signal to stay in or add to PUT positions.</p>
+
+<!-- ═══════════════════════════════════════ -->
+<h2>The MA Squeeze — Trend Change Warning</h2>
+<!-- ═══════════════════════════════════════ -->
+
+<p>One more critical pattern: when all three MAs start <strong>squeezing together</strong>, it means the current trend is losing steam and a reversal may be coming. Wide spread = strong trend. MAs converging = get ready for a shift.</p>
+
+<svg viewBox="0 0 700 320" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:700px;margin:24px auto;display:block;background:#0d1117;border-radius:12px;border:1px solid #30363d;">
+  <!-- Grid -->
+  <line x1="60" y1="40" x2="60" y2="270" stroke="#1e2733" stroke-width="1"/>
+  <line x1="60" y1="270" x2="670" y2="270" stroke="#1e2733" stroke-width="1"/>
+
+  <!-- Phase 1: Spread apart (bullish stacking) -->
+  <!-- 200 MA -->
+  <path d="M80,210 Q150,200 220,192 Q290,186 340,182 Q390,178 430,170 Q470,162 510,155 Q560,152 610,152 Q640,153 660,155" stroke="#f85149" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  <!-- 50 MA -->
+  <path d="M80,160 Q150,152 220,146 Q290,142 340,142 Q390,145 430,150 Q470,155 510,158 Q560,155 610,148 Q640,142 660,138" stroke="#58a6ff" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  <!-- 20 MA -->
+  <path d="M80,110 Q150,108 220,110 Q290,118 340,130 Q390,145 430,155 Q470,160 510,158 Q560,150 610,138 Q640,128 660,118" stroke="#3fb950" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+
+  <!-- Squeeze zone highlight -->
+  <rect x="395" y="40" width="160" height="230" rx="8" fill="rgba(245,158,11,0.06)" stroke="#f59e0b" stroke-width="1" stroke-dasharray="6,4"/>
+  <text x="475" y="62" fill="#f59e0b" font-size="12" font-family="Inter,sans-serif" font-weight="700" text-anchor="middle">SQUEEZE ZONE</text>
+
+  <!-- Spread arrows on left -->
+  <line x1="120" y1="110" x2="120" y2="208" stroke="#484f58" stroke-width="1" stroke-dasharray="3,3"/>
+  <text x="100" y="163" fill="#8b949e" font-size="10" font-family="Inter,sans-serif" text-anchor="end">wide</text>
+  <text x="100" y="175" fill="#8b949e" font-size="10" font-family="Inter,sans-serif" text-anchor="end">spread</text>
+
+  <!-- Squeeze arrows on right -->
+  <line x1="510" y1="152" x2="510" y2="158" stroke="#f59e0b" stroke-width="2"/>
+  <text x="530" y="180" fill="#f59e0b" font-size="10" font-family="Inter,sans-serif">narrow!</text>
+
+  <!-- Labels -->
+  <text x="85" y="105" fill="#3fb950" font-size="11" font-family="Inter,sans-serif" font-weight="600">20</text>
+  <text x="85" y="156" fill="#58a6ff" font-size="11" font-family="Inter,sans-serif" font-weight="600">50</text>
+  <text x="85" y="207" fill="#f85149" font-size="11" font-family="Inter,sans-serif" font-weight="600">200</text>
+
+  <rect x="190" y="248" width="320" height="22" rx="5" fill="rgba(245,158,11,0.1)"/>
+  <text x="350" y="264" fill="#f59e0b" font-size="12" font-family="Inter,sans-serif" font-weight="600" text-anchor="middle">MAs converging = trend losing momentum</text>
+</svg>
+
+<p>When you see the MAs squeeze tight on your PLTR chart, it means something is about to happen. The stock will either break out in the direction of the prevailing trend — or reverse. This is when you watch the Go Maz signals closely for confirmation.</p>
+
+<!-- ═══════════════════════════════════════ -->
+<h2>Quick Reference — Your MA Checklist</h2>
+<!-- ═══════════════════════════════════════ -->
+
+<table class="data-table">
+  <thead>
+    <tr>
+      <th>Signal</th>
+      <th>What You See</th>
+      <th>What It Means</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td class="calls">Bullish Stack</td>
+      <td>20 > 50 > 200, all sloping up</td>
+      <td>Strong uptrend, full conviction</td>
+      <td class="calls">CALLS territory</td>
+    </tr>
+    <tr>
+      <td class="calls">Golden Cross</td>
+      <td>50 crosses above 200</td>
+      <td>Medium trend turned bullish</td>
+      <td class="calls">Buy signal</td>
+    </tr>
+    <tr>
+      <td class="calls">MA Bounce</td>
+      <td>Price touches 50 or 200, goes up</td>
+      <td>MA acting as support</td>
+      <td class="calls">Trend confirmed</td>
+    </tr>
+    <tr>
+      <td class="puts">Bearish Stack</td>
+      <td>200 > 50 > 20, all sloping down</td>
+      <td>Strong downtrend, full conviction</td>
+      <td class="puts">PUTS territory</td>
+    </tr>
+    <tr>
+      <td class="puts">Death Cross</td>
+      <td>50 crosses below 200</td>
+      <td>Medium trend turned bearish</td>
+      <td class="puts">Sell signal</td>
+    </tr>
+    <tr>
+      <td class="puts">MA Rejection</td>
+      <td>Price rallies to MA, gets slapped down</td>
+      <td>MA flipped to resistance</td>
+      <td class="puts">Stay in PUTs</td>
+    </tr>
+    <tr>
+      <td style="color:#f59e0b;">MA Squeeze</td>
+      <td>All 3 MAs converging together</td>
+      <td>Trend losing momentum</td>
+      <td style="color:#f59e0b;">Watch closely</td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="callout warning">
+  <div class="callout-title">Key Questions to Ask Every Time You Look at Your Chart</div>
+  <p><strong>1. What order are the MAs in?</strong> 20 above 50 above 200 = bullish. Reversed = bearish.<br/>
+  <strong>2. Are they spreading apart or squeezing?</strong> Spreading = trend strengthening. Squeezing = possible reversal ahead.<br/>
+  <strong>3. Where is price relative to the MAs?</strong> Above all 3 = strong bull. Below all 3 = strong bear. Between them = choppy.<br/>
+  <strong>4. Is price bouncing off or getting rejected at any MA?</strong> That tells you which MA is acting as support or resistance.</p>
+</div>
+
+</BlogPost>
