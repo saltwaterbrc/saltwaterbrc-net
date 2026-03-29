@@ -16,8 +16,9 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       <a href="https://tastytrade.com" target="_blank" rel="noopener" class="tool-card">
         <div class="tool-icon" style="background: rgba(232, 63, 64, 0.12);">
           <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
-            <rect x="3" y="12" width="22" height="4" rx="2" fill="#e83f40"/>
-            <rect x="10" y="6" width="8" height="16" rx="2" fill="#e83f40"/>
+            <circle cx="10" cy="9" r="5" fill="#e83f40"/>
+            <path d="M10 14 Q10 20 14 22" stroke="#e83f40" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+            <circle cx="8" cy="7" r="1.5" fill="#ff6b6b" opacity="0.7"/>
           </svg>
         </div>
         <div class="tool-info">
@@ -28,8 +29,14 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       <a href="https://thinkorswim.com" target="_blank" rel="noopener" class="tool-card">
         <div class="tool-icon" style="background: rgba(0, 166, 237, 0.12);">
           <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
-            <polyline points="4,20 10,14 14,17 20,8 24,10" stroke="#00a6ed" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-            <circle cx="24" cy="10" r="3" fill="#00a6ed"/>
+            <line x1="14" y1="2" x2="14" y2="10" stroke="#00a6ed" stroke-width="2.5" stroke-linecap="round"/>
+            <line x1="14" y1="18" x2="14" y2="26" stroke="#00a6ed" stroke-width="2.5" stroke-linecap="round"/>
+            <line x1="2" y1="14" x2="10" y2="14" stroke="#00a6ed" stroke-width="2.5" stroke-linecap="round"/>
+            <line x1="18" y1="14" x2="26" y2="14" stroke="#00a6ed" stroke-width="2.5" stroke-linecap="round"/>
+            <line x1="5.5" y1="5.5" x2="10.5" y2="10.5" stroke="#00a6ed" stroke-width="2.5" stroke-linecap="round"/>
+            <line x1="17.5" y1="17.5" x2="22.5" y2="22.5" stroke="#00a6ed" stroke-width="2.5" stroke-linecap="round"/>
+            <line x1="22.5" y1="5.5" x2="17.5" y2="10.5" stroke="#00a6ed" stroke-width="2.5" stroke-linecap="round"/>
+            <line x1="10.5" y1="17.5" x2="5.5" y2="22.5" stroke="#00a6ed" stroke-width="2.5" stroke-linecap="round"/>
           </svg>
         </div>
         <div class="tool-info">
@@ -40,9 +47,11 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       <a href="https://unusualwhales.com" target="_blank" rel="noopener" class="tool-card">
         <div class="tool-icon" style="background: rgba(57, 210, 192, 0.12);">
           <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
-            <ellipse cx="14" cy="16" rx="10" ry="7" fill="#39d2c0"/>
-            <circle cx="10" cy="14" r="1.5" fill="#0d1117"/>
-            <path d="M8 10 Q14 4 20 10" stroke="#39d2c0" stroke-width="2" fill="none" stroke-linecap="round"/>
+            <ellipse cx="14" cy="17" rx="10" ry="6.5" fill="#39d2c0"/>
+            <ellipse cx="14" cy="15" rx="7" ry="4" fill="#2ab5a5"/>
+            <circle cx="10" cy="15" r="1.2" fill="#0d1117"/>
+            <path d="M7 11 Q10 6 14 9 Q18 6 21 11" stroke="#39d2c0" stroke-width="2" fill="none" stroke-linecap="round"/>
+            <path d="M20 18 Q24 16 25 19" stroke="#39d2c0" stroke-width="1.5" fill="none" stroke-linecap="round"/>
           </svg>
         </div>
         <div class="tool-info">
@@ -64,6 +73,34 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         <div class="tool-info">
           <div class="tool-name" style="color: #bc8cff;">Go Maz</div>
           <div class="tool-role">Screener & Signals</div>
+        </div>
+      </a>
+      <a href="https://claude.ai" target="_blank" rel="noopener" class="tool-card">
+        <div class="tool-icon" style="background: rgba(217, 168, 111, 0.12);">
+          <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+            <circle cx="14" cy="12" r="8" fill="#d9a86f"/>
+            <circle cx="14" cy="12" r="5" fill="#c4884a"/>
+            <ellipse cx="14" cy="22" rx="6" ry="3" fill="#d9a86f" opacity="0.4"/>
+            <circle cx="11" cy="11" r="1" fill="#0d1117"/>
+            <circle cx="17" cy="11" r="1" fill="#0d1117"/>
+          </svg>
+        </div>
+        <div class="tool-info">
+          <div class="tool-name" style="color: #d9a86f;">Claude</div>
+          <div class="tool-role">AI Assistant</div>
+        </div>
+      </a>
+      <a href="https://cloudflare.com" target="_blank" rel="noopener" class="tool-card">
+        <div class="tool-icon" style="background: rgba(245, 158, 11, 0.12);">
+          <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+            <path d="M19.5 19.5 C19.5 19.5 20.5 14 17 12 C14.5 10.5 12 12.5 11.5 14 C11.5 14 9.5 13 8 14.5 C6.5 16 7.5 19.5 7.5 19.5 Z" fill="#f59e0b"/>
+            <path d="M21.5 19.5 C21.5 19.5 22 16 20.5 15 C19 14 18 15.5 18 15.5" fill="#fbbf24" opacity="0.7"/>
+            <line x1="5" y1="19.5" x2="23" y2="19.5" stroke="#f59e0b" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <div class="tool-info">
+          <div class="tool-name" style="color: #f59e0b;">Cloudflare</div>
+          <div class="tool-role">Hosting & Deploy</div>
         </div>
       </a>
     </div>
