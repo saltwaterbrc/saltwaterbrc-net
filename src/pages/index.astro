@@ -6,12 +6,193 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     <div class="hero-content">
       <span class="hero-tag">Learning in Public</span>
       <h1>From Zero to <span class="accent">Options Trader</span></h1>
-      <p>Following the journey of learning options trading from scratch — powered by Go Maz, Tastytrade, and a whole lot of homework. Every trade, every lesson, documented.</p>
+      <p>Following the journey of learning options trading from scratch — every win, loss, and lesson documented.</p>
     </div>
   </section>
 
   <main class="main-content">
-    <h2 class="section-title">My Toolkit</h2>
+
+    <!-- OPEN POSITIONS -->
+    <div class="positions-header">
+      <h2 class="section-title" style="margin-bottom:0;">Open Positions</h2>
+      <span class="positions-account">Tastytrade · $1K Account</span>
+    </div>
+    <div class="positions-table">
+      <table>
+        <thead>
+          <tr>
+            <th>Position</th>
+            <th class="right">Last</th>
+            <th class="right">P/L</th>
+            <th class="right">IVR</th>
+            <th class="right">DTE</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <div class="ticker-cell">
+                <span class="ticker-symbol">PLTR</span>
+                <span class="ticker-type type-put">PUT</span>
+                <span class="ticker-strike">$120 · Jul 17</span>
+              </div>
+            </td>
+            <td class="right" style="color:var(--text-primary);font-weight:600;">$143.05</td>
+            <td class="right pl-positive">+$132.00</td>
+            <td class="right text-dim">23.5</td>
+            <td class="right text-dim">110d</td>
+          </tr>
+          <tr>
+            <td colspan="5" class="empty-row">Next position goes here...</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="positions-footer">
+        <span class="pf-label">Total P/L</span>
+        <span class="pf-value pl-positive">+$132.00</span>
+      </div>
+    </div>
+
+    <!-- JOURNEY CHART -->
+    <div class="journey-header" style="margin-top:40px;">
+      <h2 class="section-title" style="margin-bottom:0;">The Journey So Far</h2>
+      <span class="journey-range">Started March 26, 2026</span>
+    </div>
+    <div class="chart-container" id="chartContainer">
+      <div class="y-labels">
+        <span class="y-label">Advanced</span>
+        <span class="y-label">Intermediate</span>
+        <span class="y-label">Foundations</span>
+        <span class="y-label">Zero</span>
+      </div>
+
+      <svg class="journey-chart" id="journeyChart" viewBox="0 0 900 380" preserveAspectRatio="none">
+        <defs>
+          <linearGradient id="lineGrad" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0%" stop-color="#58a6ff"/>
+            <stop offset="100%" stop-color="#3fb950"/>
+          </linearGradient>
+          <linearGradient id="areaGrad" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#58a6ff" stop-opacity="0.12"/>
+            <stop offset="100%" stop-color="#58a6ff" stop-opacity="0"/>
+          </linearGradient>
+        </defs>
+
+        <!-- Grid lines -->
+        <line x1="60" y1="30" x2="880" y2="30" stroke="#1a2030" stroke-width="0.5"/>
+        <line x1="60" y1="90" x2="880" y2="90" stroke="#1a2030" stroke-width="0.5"/>
+        <line x1="60" y1="150" x2="880" y2="150" stroke="#1a2030" stroke-width="0.5"/>
+        <line x1="60" y1="210" x2="880" y2="210" stroke="#1a2030" stroke-width="0.5"/>
+
+        <!-- 50-period MA (orange, lagging) -->
+        <path d="M80,230 C150,228 200,222 280,218 C360,214 400,210 440,200 C480,192 520,186 560,178 C600,172 650,165 700,158 C740,153 780,148 820,142 L860,138"
+              stroke="#d29922" stroke-width="1.5" fill="none" stroke-dasharray="6,4" opacity="0.5"/>
+
+        <!-- 20-period MA (blue, responsive) -->
+        <path d="M80,225 C130,220 180,215 230,207 C280,200 320,195 380,188 C420,182 460,176 510,168 C560,162 610,155 660,145 C710,138 750,130 800,120 L860,112"
+              stroke="#58a6ff" stroke-width="1.5" fill="none" stroke-dasharray="4,3" opacity="0.4"/>
+
+        <!-- Area fill -->
+        <path d="M80,230 L200,200 L340,180 L440,168 L540,152 L650,136 L760,116 L850,98 L850,240 L80,240 Z" fill="url(#areaGrad)"/>
+
+        <!-- Main journey line -->
+        <path d="M80,230 L140,218 L200,200 L260,192 L340,180 L390,174 L440,168 L490,160 L540,152 L590,144 L650,136 L710,126 L760,116 L810,106 L850,98"
+              stroke="url(#lineGrad)" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+
+        <!-- Volume separator -->
+        <line x1="60" y1="255" x2="880" y2="255" stroke="#30363d" stroke-width="0.5"/>
+
+        <!-- VOLUME BARS -->
+        <rect x="72" y="296" width="14" height="24" fill="#3fb950" rx="1" opacity="0.7"/>
+        <rect x="92" y="290" width="14" height="30" fill="#3fb950" rx="1" opacity="0.7"/>
+        <rect x="112" y="300" width="14" height="20" fill="#f85149" rx="1" opacity="0.6"/>
+        <rect x="132" y="286" width="14" height="34" fill="#3fb950" rx="1" opacity="0.7"/>
+        <rect x="152" y="294" width="14" height="26" fill="#3fb950" rx="1" opacity="0.7"/>
+        <rect x="172" y="302" width="14" height="18" fill="#f85149" rx="1" opacity="0.6"/>
+        <rect x="192" y="288" width="14" height="32" fill="#3fb950" rx="1" opacity="0.7"/>
+        <rect x="222" y="298" width="14" height="22" fill="#3fb950" rx="1" opacity="0.7"/>
+        <rect x="242" y="304" width="14" height="16" fill="#f85149" rx="1" opacity="0.6"/>
+        <rect x="262" y="292" width="14" height="28" fill="#3fb950" rx="1" opacity="0.7"/>
+        <rect x="282" y="296" width="14" height="24" fill="#3fb950" rx="1" opacity="0.7"/>
+        <rect x="312" y="302" width="14" height="18" fill="#f85149" rx="1" opacity="0.6"/>
+        <rect x="332" y="284" width="14" height="36" fill="#3fb950" rx="1" opacity="0.8"/>
+        <rect x="352" y="290" width="14" height="30" fill="#3fb950" rx="1" opacity="0.7"/>
+        <rect x="372" y="300" width="14" height="20" fill="#f85149" rx="1" opacity="0.6"/>
+        <rect x="392" y="294" width="14" height="26" fill="#3fb950" rx="1" opacity="0.7"/>
+        <rect x="412" y="288" width="14" height="32" fill="#3fb950" rx="1" opacity="0.7"/>
+        <rect x="432" y="306" width="14" height="14" fill="#f85149" rx="1" opacity="0.6"/>
+        <rect x="452" y="298" width="14" height="22" fill="#3fb950" rx="1" opacity="0.7"/>
+        <rect x="492" y="308" width="14" height="12" fill="#f85149" rx="1" opacity="0.4"/>
+        <rect x="512" y="310" width="14" height="10" fill="#f85149" rx="1" opacity="0.3"/>
+        <rect x="552" y="296" width="14" height="24" fill="#3fb950" rx="1" opacity="0.7"/>
+        <rect x="572" y="290" width="14" height="30" fill="#3fb950" rx="1" opacity="0.7"/>
+        <rect x="592" y="284" width="14" height="36" fill="#3fb950" rx="1" opacity="0.8"/>
+        <rect x="612" y="300" width="14" height="20" fill="#f85149" rx="1" opacity="0.6"/>
+        <rect x="632" y="278" width="14" height="42" fill="#3fb950" rx="1" opacity="0.9"/>
+        <rect x="652" y="290" width="14" height="30" fill="#3fb950" rx="1" opacity="0.7"/>
+        <rect x="672" y="296" width="14" height="24" fill="#f85149" rx="1" opacity="0.6"/>
+        <rect x="692" y="286" width="14" height="34" fill="#3fb950" rx="1" opacity="0.7"/>
+        <rect x="712" y="280" width="14" height="40" fill="#3fb950" rx="1" opacity="0.85"/>
+        <rect x="732" y="294" width="14" height="26" fill="#3fb950" rx="1" opacity="0.7"/>
+        <rect x="752" y="302" width="14" height="18" fill="#f85149" rx="1" opacity="0.6"/>
+        <rect x="772" y="288" width="14" height="32" fill="#3fb950" rx="1" opacity="0.7"/>
+        <rect x="792" y="282" width="14" height="38" fill="#3fb950" rx="1" opacity="0.8"/>
+        <rect x="812" y="276" width="14" height="44" fill="#3fb950" rx="1" opacity="0.9"/>
+        <rect x="832" y="270" width="14" height="50" fill="#3fb950" rx="1" opacity="1"/>
+
+        <!-- Volume average line -->
+        <path d="M80,306 L200,300 L340,298 L440,296 L540,302 L600,294 L700,290 L800,286 L850,282"
+              stroke="#d29922" stroke-width="1" fill="none" opacity="0.4"/>
+
+        <text x="65" y="268" fill="#484f58" font-size="8" text-anchor="start">VOL</text>
+
+        <!-- X-axis dates -->
+        <text x="80" y="340" fill="#484f58" font-size="11" text-anchor="middle">3/26</text>
+        <text x="280" y="340" fill="#484f58" font-size="11" text-anchor="middle">3/26</text>
+        <text x="440" y="340" fill="#484f58" font-size="11" text-anchor="middle">3/27</text>
+        <text x="510" y="340" fill="#484f58" font-size="11" text-anchor="middle">3/28</text>
+        <text x="700" y="340" fill="#484f58" font-size="11" text-anchor="middle">3/29</text>
+        <text x="850" y="340" fill="#484f58" font-size="11" text-anchor="middle">Now</text>
+
+        <!-- Milestone dots -->
+        <circle cx="80" cy="230" r="5" fill="var(--bg-primary)" stroke="#d29922" stroke-width="2" class="milestone" data-idx="0" style="cursor:pointer"/>
+        <circle cx="200" cy="200" r="5" fill="var(--bg-primary)" stroke="#bc8cff" stroke-width="2" class="milestone" data-idx="1" style="cursor:pointer"/>
+        <circle cx="340" cy="180" r="7" fill="var(--bg-primary)" stroke="#58a6ff" stroke-width="2.5" class="milestone" data-idx="2" style="cursor:pointer"/>
+        <circle cx="440" cy="168" r="6" fill="var(--bg-primary)" stroke="#3fb950" stroke-width="2.5" class="milestone" data-idx="3" style="cursor:pointer"/>
+        <circle cx="540" cy="152" r="5" fill="var(--bg-primary)" stroke="#58a6ff" stroke-width="2" class="milestone" data-idx="4" style="cursor:pointer"/>
+        <circle cx="650" cy="136" r="5" fill="var(--bg-primary)" stroke="#bc8cff" stroke-width="2" class="milestone" data-idx="5" style="cursor:pointer"/>
+        <circle cx="760" cy="116" r="5" fill="var(--bg-primary)" stroke="#3fb950" stroke-width="2" class="milestone" data-idx="6" style="cursor:pointer"/>
+        <circle cx="850" cy="98" r="7" fill="var(--bg-primary)" stroke="#58a6ff" stroke-width="2.5" class="milestone" data-idx="7" style="cursor:pointer"/>
+
+        <!-- Pulsing glow -->
+        <circle cx="850" cy="98" r="12" fill="none" stroke="#3fb950" stroke-width="1" opacity="0.3">
+          <animate attributeName="r" values="9;16;9" dur="2s" repeatCount="indefinite"/>
+          <animate attributeName="opacity" values="0.4;0.1;0.4" dur="2s" repeatCount="indefinite"/>
+        </circle>
+
+        <!-- Labels -->
+        <text x="80" y="222" fill="#d29922" font-size="8" text-anchor="middle" font-weight="600">DAY 1</text>
+        <text x="200" y="192" fill="#bc8cff" font-size="8" text-anchor="middle" font-weight="600">SCREENER</text>
+        <text x="340" y="170" fill="#58a6ff" font-size="8" text-anchor="middle" font-weight="600">ED SESSION</text>
+        <text x="440" y="160" fill="#3fb950" font-size="8" text-anchor="middle" font-weight="600">1ST TRADE</text>
+        <text x="540" y="144" fill="#58a6ff" font-size="8" text-anchor="middle" font-weight="600">RULES</text>
+        <text x="650" y="128" fill="#bc8cff" font-size="8" text-anchor="middle" font-weight="600">SITE LIVE</text>
+        <text x="760" y="108" fill="#3fb950" font-size="8" text-anchor="middle" font-weight="600">MA SIGNALS</text>
+        <text x="850" y="88" fill="#58a6ff" font-size="8" text-anchor="middle" font-weight="600">FULL READ</text>
+      </svg>
+
+      <!-- MA Legend -->
+      <div class="ma-legend">
+        <div class="ma-legend-item"><span class="ma-dot" style="background:#58a6ff;"></span> 20-period</div>
+        <div class="ma-legend-item"><span class="ma-dot" style="background:#d29922;"></span> 50-period</div>
+        <div class="ma-legend-item"><span class="ma-dot" style="background:linear-gradient(90deg,#58a6ff,#3fb950);"></span> Journey</div>
+      </div>
+
+      <div class="milestone-tooltip" id="tooltip"></div>
+    </div>
+
+    <!-- TOOLKIT -->
+    <h2 class="section-title" style="margin-top:40px;">My Toolkit</h2>
     <div class="toolkit-row">
       <a href="https://tastytrade.com" target="_blank" rel="noopener" class="tool-card">
         <div class="tool-icon" style="background: rgba(232, 63, 64, 0.12);">
@@ -105,48 +286,311 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       </a>
     </div>
 
-    <h2 style="margin-top: 48px; font-size: 1.5rem; font-weight: 700;">Latest Posts</h2>
-
-    <div class="posts-grid">
-      <a href="/blog/bullish-bearish-signals" class="post-card" style="text-decoration: none; color: inherit;">
-        <span class="tag education">Education</span>
-        <h3>Bullish & Bearish Signals — Reading Moving Averages</h3>
-        <p>How to read the 20, 50, and 200-day MAs. Stacking order, golden cross, death cross, MA bounce, rejection, and the squeeze — with charts for every signal.</p>
-        <div class="post-meta">
-          <span>March 29, 2026</span>
-          <span>10 min read</span>
-        </div>
-      </a>
-
-      <a href="/blog/first-trade-pltr-put" class="post-card" style="text-decoration: none; color: inherit;">
-        <span class="tag trade">Trade</span>
-        <h3>My First Trade — PLTR $120 Put</h3>
-        <p>Breaking down my first ever options trade in the simplest terms possible. What's a put, how do I track it, and why PLTR?</p>
-        <div class="post-meta">
-          <span>March 26, 2026</span>
-          <span>7 min read</span>
-        </div>
-      </a>
-
-      <a href="/blog/day-1-the-setup" class="post-card" style="text-decoration: none; color: inherit;">
-        <span class="tag">Journal</span>
-        <h3>Day 1 — The Setup</h3>
-        <p>Account funded, screener running, first analysis complete. Here's everything I learned on day one of my options trading journey with Go Maz.</p>
-        <div class="post-meta">
-          <span>March 26, 2026</span>
-          <span>8 min read</span>
-        </div>
-      </a>
-
-      <a href="/blog/go-maz-first-scan" class="post-card" style="text-decoration: none; color: inherit;">
-        <span class="tag analysis">Analysis</span>
-        <h3>Go Maz First Scan — What the Screener Found</h3>
-        <p>Running the Go Maz screener for the first time. AMD, NVDA, BA, and RIVN all lit up. Here's the full breakdown with Ed's rules applied.</p>
-        <div class="post-meta">
-          <span>March 26, 2026</span>
-          <span>6 min read</span>
-        </div>
-      </a>
+    <!-- CTAs -->
+    <div class="cta-row">
+      <a href="/blog" class="cta-btn cta-primary">Read the Blog →</a>
+      <a href="/education" class="cta-btn cta-secondary">Education Hub</a>
     </div>
+
   </main>
 </BaseLayout>
+
+<style>
+  /* Positions Table */
+  .positions-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+  }
+  .positions-account {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+  }
+  .positions-table {
+    width: 100%;
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-primary);
+    border-radius: var(--radius);
+    overflow: hidden;
+    margin-bottom: 8px;
+  }
+  .positions-table table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  .positions-table th {
+    text-align: left;
+    padding: 10px 16px;
+    font-size: 0.7rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border-bottom: 1px solid var(--border-primary);
+    font-weight: 600;
+  }
+  .positions-table th.right,
+  .positions-table td.right { text-align: right; }
+  .positions-table td {
+    padding: 14px 16px;
+    font-size: 0.9rem;
+    border-bottom: 1px solid rgba(48,54,61,0.5);
+  }
+  .positions-table tr:last-child td { border-bottom: none; }
+  .ticker-cell { display: flex; align-items: center; gap: 10px; }
+  .ticker-symbol { font-weight: 800; color: var(--text-primary); font-size: 1rem; }
+  .ticker-type {
+    font-size: 0.65rem;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+  .type-put { background: rgba(248,81,73,0.15); color: var(--accent-red); }
+  .type-call { background: rgba(63,185,80,0.15); color: var(--accent-green); }
+  .ticker-strike { font-size: 0.78rem; color: var(--text-secondary); }
+  .pl-positive { color: var(--accent-green); font-weight: 700; }
+  .pl-negative { color: var(--accent-red); font-weight: 700; }
+  .text-dim { color: var(--text-secondary); }
+  .empty-row {
+    text-align: center !important;
+    color: var(--text-muted);
+    font-style: italic;
+    font-size: 0.85rem;
+    padding: 20px 16px !important;
+  }
+  .positions-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 16px;
+    border-top: 1px solid var(--border-primary);
+    background: rgba(0,0,0,0.15);
+  }
+  .pf-label {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  .pf-value { font-size: 1rem; font-weight: 800; }
+
+  /* Journey Chart */
+  .journey-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+  }
+  .journey-range { font-size: 0.8rem; color: var(--text-muted); }
+  .chart-container {
+    position: relative;
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-primary);
+    border-radius: var(--radius);
+    padding: 20px 16px 8px;
+    overflow: visible;
+  }
+  .y-labels {
+    position: absolute;
+    left: 8px;
+    top: 20px;
+    bottom: 90px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    pointer-events: none;
+  }
+  .y-label {
+    font-size: 0.6rem;
+    color: #263550;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  .journey-chart { width: 100%; height: 380px; }
+
+  .ma-legend {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    padding: 8px 0 4px;
+  }
+  .ma-legend-item {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 0.7rem;
+    color: var(--text-muted);
+  }
+  .ma-dot { width: 8px; height: 3px; border-radius: 2px; }
+
+  /* Milestone tooltips */
+  .milestone-tooltip {
+    position: absolute;
+    background: var(--bg-card);
+    border: 1px solid var(--border-primary);
+    border-radius: 10px;
+    padding: 12px 14px;
+    width: 220px;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.2s;
+    z-index: 10;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+  }
+  .milestone-tooltip.visible { opacity: 1; pointer-events: auto; }
+  .tooltip-tag {
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 8px;
+    font-size: 0.65rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 6px;
+  }
+  .tooltip-title { font-size: 0.9rem; font-weight: 700; color: var(--text-primary); margin-bottom: 4px; line-height: 1.3; }
+  .tooltip-desc { font-size: 0.78rem; color: var(--text-secondary); line-height: 1.4; margin-bottom: 6px; }
+  .tooltip-date { font-size: 0.7rem; color: var(--text-muted); }
+  .tooltip-link { display: inline-block; margin-top: 6px; font-size: 0.75rem; color: var(--accent-blue); text-decoration: none; font-weight: 600; }
+  .tooltip-link:hover { text-decoration: underline; }
+
+  /* CTAs */
+  .cta-row {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    margin-top: 40px;
+  }
+  .cta-btn {
+    padding: 12px 28px;
+    border-radius: var(--radius-sm);
+    font-size: 0.9rem;
+    font-weight: 700;
+    text-decoration: none;
+    transition: all 0.2s;
+  }
+  .cta-primary {
+    background: var(--gradient-accent);
+    color: #000;
+  }
+  .cta-primary:hover { opacity: 0.9; transform: translateY(-1px); }
+  .cta-secondary {
+    background: transparent;
+    border: 1px solid var(--border-primary);
+    color: var(--text-secondary);
+  }
+  .cta-secondary:hover { border-color: var(--accent-blue); color: var(--accent-blue); }
+
+  @media (max-width: 768px) {
+    .positions-header { flex-direction: column; gap: 4px; align-items: flex-start; }
+    .journey-header { flex-direction: column; gap: 4px; align-items: flex-start; }
+    .journey-chart { height: 300px; }
+    .cta-row { flex-direction: column; align-items: center; }
+    .positions-table { overflow-x: auto; }
+  }
+</style>
+
+<script>
+const milestones = [
+  {
+    tag: "Journal", tagColor: "#d29922", tagBg: "rgba(210,153,34,0.15)",
+    title: "Day 1 — The Setup",
+    desc: "Account funded on Tastytrade. ThinkorSwim downloaded. First time looking at a real options chain.",
+    date: "March 26, 2026",
+    link: "/blog/day-1-the-setup"
+  },
+  {
+    tag: "Analysis", tagColor: "#bc8cff", tagBg: "rgba(188,140,255,0.15)",
+    title: "Go Maz First Scan",
+    desc: "Ran the screener for the first time. AMD, NVDA, BA, RIVN all lit up. Applied Ed's 7 rules.",
+    date: "March 26, 2026",
+    link: "/blog/go-maz-first-scan"
+  },
+  {
+    tag: "Education", tagColor: "#58a6ff", tagBg: "rgba(88,166,255,0.15)",
+    title: "Ed Session — Core Charting",
+    desc: "Moving averages, support & resistance, volume, RSI, A/D, delta, IVR. The foundation session.",
+    date: "March 26, 2026",
+    link: "/education"
+  },
+  {
+    tag: "Trade", tagColor: "#3fb950", tagBg: "rgba(63,185,80,0.15)",
+    title: "First Trade — PLTR $120 Put",
+    desc: "First ever options trade. 120-day expiration, 20-delta. Real money, real learning.",
+    date: "March 26, 2026",
+    link: "/blog/first-trade-pltr-put"
+  },
+  {
+    tag: "Education", tagColor: "#58a6ff", tagBg: "rgba(88,166,255,0.15)",
+    title: "Go Maz 7 Rules + Vega + Bid/Ask",
+    desc: "Deep dive on Ed's scoring system. Vega lesson when IVR jumped from 18.7 to 48.",
+    date: "March 27, 2026",
+    link: "/education"
+  },
+  {
+    tag: "Build", tagColor: "#bc8cff", tagBg: "rgba(188,140,255,0.15)",
+    title: "Site Goes Live",
+    desc: "saltwaterbrc.net deployed. Education hub with Black-Scholes, Expected Move, IVR, S&R pages.",
+    date: "March 27, 2026",
+    link: "/education"
+  },
+  {
+    tag: "Education", tagColor: "#3fb950", tagBg: "rgba(63,185,80,0.15)",
+    title: "MA Signals Blog Post",
+    desc: "Bullish & bearish stacking, golden cross, death cross, bounce, rejection, squeeze — 7 SVG charts.",
+    date: "March 29, 2026",
+    link: "/blog/bullish-bearish-signals"
+  },
+  {
+    tag: "Milestone", tagColor: "#58a6ff", tagBg: "rgba(88,166,255,0.15)",
+    title: "Full Chart Read — All 5 Indicators",
+    desc: "MAs + candles + volume + RSI + A/D on live PLTR. The Trade Confidence Check.",
+    date: "March 29, 2026",
+    link: "/blog"
+  }
+];
+
+const dotPositions = [
+  { x: 80, y: 230 }, { x: 200, y: 200 }, { x: 340, y: 180 }, { x: 440, y: 168 },
+  { x: 540, y: 152 }, { x: 650, y: 136 }, { x: 760, y: 116 }, { x: 850, y: 98 }
+];
+
+const tooltip = document.getElementById('tooltip');
+const container = document.getElementById('chartContainer');
+const svg = document.getElementById('journeyChart');
+
+document.querySelectorAll('.milestone').forEach(dot => {
+  dot.addEventListener('mouseenter', () => {
+    const idx = parseInt(dot.getAttribute('data-idx'));
+    const m = milestones[idx];
+    const pos = dotPositions[idx];
+    const svgRect = svg.getBoundingClientRect();
+    const containerRect = container.getBoundingClientRect();
+    const scaleX = svgRect.width / 900;
+    const scaleY = svgRect.height / 380;
+    const pixelX = (pos.x * scaleX) + (svgRect.left - containerRect.left);
+    const pixelY = (pos.y * scaleY) + (svgRect.top - containerRect.top);
+
+    tooltip.innerHTML = `
+      <span class="tooltip-tag" style="background:${m.tagBg};color:${m.tagColor}">${m.tag}</span>
+      <div class="tooltip-title">${m.title}</div>
+      <div class="tooltip-desc">${m.desc}</div>
+      <div class="tooltip-date">${m.date}</div>
+      <a class="tooltip-link" href="${m.link}">Read more →</a>
+    `;
+    let left = pixelX + 16;
+    if (left + 220 > containerRect.width) left = pixelX - 236;
+    let top = pixelY - 80;
+    if (top < 0) top = pixelY + 20;
+    tooltip.style.left = left + 'px';
+    tooltip.style.top = top + 'px';
+    tooltip.classList.add('visible');
+  });
+  dot.addEventListener('mouseleave', () => tooltip.classList.remove('visible'));
+  dot.addEventListener('click', () => {
+    const idx = parseInt(dot.getAttribute('data-idx'));
+    window.location.href = milestones[idx].link;
+  });
+});
+</script>
