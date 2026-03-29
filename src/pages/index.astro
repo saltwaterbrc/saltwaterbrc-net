@@ -11,23 +11,61 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   </section>
 
   <main class="main-content">
-    <div class="stats-row">
-      <div class="stat-card">
-        <div class="stat-value">$1K</div>
-        <div class="stat-label">Starting Capital</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-value">Day 1</div>
-        <div class="stat-label">Journey Started</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-value">20Δ</div>
-        <div class="stat-label">Target Delta</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-value">$100</div>
-        <div class="stat-label">Max Loss Per Trade</div>
-      </div>
+    <h2 class="section-title">My Toolkit</h2>
+    <div class="toolkit-row">
+      <a href="https://tastytrade.com" target="_blank" rel="noopener" class="tool-card">
+        <div class="tool-icon" style="background: rgba(232, 63, 64, 0.12);">
+          <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+            <rect x="3" y="12" width="22" height="4" rx="2" fill="#e83f40"/>
+            <rect x="10" y="6" width="8" height="16" rx="2" fill="#e83f40"/>
+          </svg>
+        </div>
+        <div class="tool-info">
+          <div class="tool-name" style="color: #e83f40;">tastytrade</div>
+          <div class="tool-role">Trading Platform</div>
+        </div>
+      </a>
+      <a href="https://thinkorswim.com" target="_blank" rel="noopener" class="tool-card">
+        <div class="tool-icon" style="background: rgba(0, 166, 237, 0.12);">
+          <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+            <polyline points="4,20 10,14 14,17 20,8 24,10" stroke="#00a6ed" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+            <circle cx="24" cy="10" r="3" fill="#00a6ed"/>
+          </svg>
+        </div>
+        <div class="tool-info">
+          <div class="tool-name" style="color: #00a6ed;">thinkorswim</div>
+          <div class="tool-role">Charting & Analysis</div>
+        </div>
+      </a>
+      <a href="https://unusualwhales.com" target="_blank" rel="noopener" class="tool-card">
+        <div class="tool-icon" style="background: rgba(57, 210, 192, 0.12);">
+          <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+            <ellipse cx="14" cy="16" rx="10" ry="7" fill="#39d2c0"/>
+            <circle cx="10" cy="14" r="1.5" fill="#0d1117"/>
+            <path d="M8 10 Q14 4 20 10" stroke="#39d2c0" stroke-width="2" fill="none" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <div class="tool-info">
+          <div class="tool-name" style="color: #39d2c0;">Unusual Whales</div>
+          <div class="tool-role">Options Flow Data</div>
+        </div>
+      </a>
+      <a href="https://gomaz.com" target="_blank" rel="noopener" class="tool-card">
+        <div class="tool-icon" style="background: rgba(188, 140, 255, 0.12);">
+          <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+            <circle cx="14" cy="14" r="10" stroke="#bc8cff" stroke-width="2" fill="none"/>
+            <circle cx="14" cy="14" r="4" fill="#bc8cff"/>
+            <line x1="14" y1="4" x2="14" y2="8" stroke="#bc8cff" stroke-width="2" stroke-linecap="round"/>
+            <line x1="14" y1="20" x2="14" y2="24" stroke="#bc8cff" stroke-width="2" stroke-linecap="round"/>
+            <line x1="4" y1="14" x2="8" y2="14" stroke="#bc8cff" stroke-width="2" stroke-linecap="round"/>
+            <line x1="20" y1="14" x2="24" y2="14" stroke="#bc8cff" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <div class="tool-info">
+          <div class="tool-name" style="color: #bc8cff;">Go Maz</div>
+          <div class="tool-role">Screener & Signals</div>
+        </div>
+      </a>
     </div>
 
     <h2 style="margin-top: 48px; font-size: 1.5rem; font-weight: 700;">Latest Posts</h2>
