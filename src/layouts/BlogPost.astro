@@ -4,13 +4,14 @@ interface Props {
   date: string;
   description?: string;
   tag?: string;
+  ogImage?: string;
 }
 
 import BaseLayout from './BaseLayout.astro';
 
-const { title, date, description, tag = "journal" } = Astro.props;
+const { title, date, description, tag = "journal", ogImage } = Astro.props;
 ---
-<BaseLayout title={title} description={description}>
+<BaseLayout title={title} description={description} ogImage={ogImage}>
   <article>
     <div class="post-header">
       <span class={`tag ${tag}`}>{tag}</span>

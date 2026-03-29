@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0d1117"/>
+      <stop offset="50%" style="stop-color:#1a1e33"/>
+      <stop offset="100%" style="stop-color:#0d1117"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#58a6ff"/>
+      <stop offset="100%" style="stop-color:#39d2c0"/>
+    </linearGradient>
+    <linearGradient id="topbar" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#58a6ff"/>
+      <stop offset="100%" style="stop-color:#39d2c0"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect width="1200" height="4" fill="url(#topbar)"/>
+
+  <!-- Mini chart in background (right side, faded) -->
+  <g opacity="0.15">
+    <!-- Bullish MAs -->
+    <path d="M650,420 Q780,390 900,350 Q1000,310 1100,260" stroke="#3fb950" stroke-width="3" fill="none"/>
+    <path d="M650,440 Q780,415 900,385 Q1000,360 1100,330" stroke="#58a6ff" stroke-width="3" fill="none"/>
+    <path d="M650,460 Q780,445 900,430 Q1000,415 1100,400" stroke="#f85149" stroke-width="3" fill="none"/>
+  </g>
+
+  <!-- Bird (smaller, top-right corner) -->
+  <g transform="translate(1000, 40) scale(0.9)">
+    <ellipse cx="100" cy="105" rx="38" ry="48" fill="#e8e8e8"/>
+    <path d="M62 90 Q30 75 18 95 Q25 105 40 108 Q50 108 62 105 Z" fill="#58a6ff"/>
+    <path d="M138 90 Q170 75 182 95 Q175 105 160 108 Q150 108 138 105 Z" fill="#58a6ff"/>
+    <path d="M62 95 Q38 85 25 98 Q32 105 45 107 Q52 106 62 103 Z" fill="#3d8bdb"/>
+    <path d="M138 95 Q162 85 175 98 Q168 105 155 107 Q148 106 138 103 Z" fill="#3d8bdb"/>
+    <circle cx="100" cy="68" r="22" fill="#f0f0f0"/>
+    <circle cx="91" cy="63" r="6" fill="#0d1117"/>
+    <circle cx="109" cy="63" r="6" fill="#0d1117"/>
+    <circle cx="92" cy="61" r="2" fill="white"/>
+    <circle cx="110" cy="61" r="2" fill="white"/>
+    <path d="M96 72 L100 82 L104 72 Z" fill="#39d2c0"/>
+    <line x1="90" y1="150" x2="85" y2="165" stroke="#484f58" stroke-width="3" stroke-linecap="round"/>
+    <line x1="85" y1="165" x2="78" y2="168" stroke="#484f58" stroke-width="2" stroke-linecap="round"/>
+    <line x1="85" y1="165" x2="85" y2="170" stroke="#484f58" stroke-width="2" stroke-linecap="round"/>
+    <line x1="85" y1="165" x2="91" y2="168" stroke="#484f58" stroke-width="2" stroke-linecap="round"/>
+    <line x1="110" y1="150" x2="115" y2="165" stroke="#484f58" stroke-width="3" stroke-linecap="round"/>
+    <line x1="115" y1="165" x2="108" y2="168" stroke="#484f58" stroke-width="2" stroke-linecap="round"/>
+    <line x1="115" y1="165" x2="115" y2="170" stroke="#484f58" stroke-width="2" stroke-linecap="round"/>
+    <line x1="115" y1="165" x2="121" y2="168" stroke="#484f58" stroke-width="2" stroke-linecap="round"/>
+  </g>
+
+  <!-- Tag -->
+  <rect x="80" y="120" width="120" height="30" rx="15" fill="rgba(188,140,255,0.12)" stroke="rgba(188,140,255,0.25)" stroke-width="1"/>
+  <text x="140" y="141" fill="#bc8cff" font-family="Inter,Helvetica,Arial,sans-serif" font-size="13" font-weight="600" text-anchor="middle" letter-spacing="1">EDUCATION</text>
+
+  <!-- Title -->
+  <text x="80" y="210" fill="#e6edf3" font-family="Inter,Helvetica,Arial,sans-serif" font-size="52" font-weight="800" letter-spacing="-1">Bullish &amp; Bearish</text>
+  <text x="80" y="275" fill="#e6edf3" font-family="Inter,Helvetica,Arial,sans-serif" font-size="52" font-weight="800" letter-spacing="-1">Signals</text>
+
+  <!-- Subtitle -->
+  <text x="80" y="330" fill="#8b949e" font-family="Inter,Helvetica,Arial,sans-serif" font-size="22">Reading the 20, 50, and 200-Day Moving Averages</text>
+
+  <!-- Signal pills -->
+  <rect x="80" y="380" width="145" height="36" rx="8" fill="rgba(63,185,80,0.1)" stroke="rgba(63,185,80,0.3)" stroke-width="1"/>
+  <text x="152" y="404" fill="#3fb950" font-family="Inter,Helvetica,Arial,sans-serif" font-size="14" font-weight="600" text-anchor="middle">Golden Cross</text>
+
+  <rect x="240" y="380" width="140" height="36" rx="8" fill="rgba(248,81,73,0.1)" stroke="rgba(248,81,73,0.3)" stroke-width="1"/>
+  <text x="310" y="404" fill="#f85149" font-family="Inter,Helvetica,Arial,sans-serif" font-size="14" font-weight="600" text-anchor="middle">Death Cross</text>
+
+  <rect x="395" y="380" width="145" height="36" rx="8" fill="rgba(63,185,80,0.1)" stroke="rgba(63,185,80,0.3)" stroke-width="1"/>
+  <text x="467" y="404" fill="#3fb950" font-family="Inter,Helvetica,Arial,sans-serif" font-size="14" font-weight="600" text-anchor="middle">MA Bounce</text>
+
+  <rect x="555" y="380" width="145" height="36" rx="8" fill="rgba(245,158,11,0.1)" stroke="rgba(245,158,11,0.3)" stroke-width="1"/>
+  <text x="627" y="404" fill="#f59e0b" font-family="Inter,Helvetica,Arial,sans-serif" font-size="14" font-weight="600" text-anchor="middle">MA Squeeze</text>
+
+  <!-- MA legend -->
+  <line x1="80" y1="470" x2="110" y2="470" stroke="#3fb950" stroke-width="3" stroke-linecap="round"/>
+  <text x="120" y="475" fill="#8b949e" font-family="Inter,Helvetica,Arial,sans-serif" font-size="15">20-day MA</text>
+  <line x1="230" y1="470" x2="260" y2="470" stroke="#58a6ff" stroke-width="3" stroke-linecap="round"/>
+  <text x="270" y="475" fill="#8b949e" font-family="Inter,Helvetica,Arial,sans-serif" font-size="15">50-day MA</text>
+  <line x1="380" y1="470" x2="410" y2="470" stroke="#f85149" stroke-width="3" stroke-linecap="round"/>
+  <text x="420" y="475" fill="#8b949e" font-family="Inter,Helvetica,Arial,sans-serif" font-size="15">200-day MA</text>
+
+  <!-- Bottom bar -->
+  <rect x="0" y="590" width="1200" height="40" fill="rgba(0,0,0,0.3)"/>
+  <text x="80" y="616" fill="#58a6ff" font-family="Inter,Helvetica,Arial,sans-serif" font-size="18" font-weight="800">SaltWaterBRC</text>
+  <text x="255" y="616" fill="#484f58" font-family="Inter,Helvetica,Arial,sans-serif" font-size="18" font-weight="400">/ options</text>
+  <text x="1120" y="616" fill="#484f58" font-family="Inter,Helvetica,Arial,sans-serif" font-size="14" text-anchor="end">saltwaterbrc.net</text>
+</svg>
