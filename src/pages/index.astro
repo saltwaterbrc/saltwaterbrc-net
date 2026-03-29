@@ -66,7 +66,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         <span class="y-label">Zero</span>
       </div>
 
-      <svg class="journey-chart" id="journeyChart" viewBox="0 0 900 380" preserveAspectRatio="none">
+      <svg class="journey-chart" id="journeyChart" viewBox="0 0 900 380" preserveAspectRatio="xMidYMid meet">
         <defs>
           <linearGradient id="lineGrad" x1="0" y1="0" x2="1" y2="0">
             <stop offset="0%" stop-color="#58a6ff"/>
@@ -407,7 +407,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     text-transform: uppercase;
     letter-spacing: 0.5px;
   }
-  .journey-chart { width: 100%; height: 380px; }
+  .journey-chart { width: 100%; height: auto; max-height: 420px; }
 
   .ma-legend {
     display: flex;
